@@ -27,7 +27,32 @@
               "children" : [ {
                 "children" : [ {
                   "checkParentsRelease" : false,
-                  "children" : [ ],
+                  "children" : [ {
+                    "children" : [ ],
+                    "cmdkMetadataCustomization" : false,
+                    "code" : 819386268,
+                    "componentType" : "WFILTRO",
+                    "customProperties" : {
+                      "enableMultiFilters" : "N"
+                    },
+                    "description" : "Filter",
+                    "dictionaryCode" : 819392589,
+                    "experimentalFeatures" : {
+                      "experimentalForm" : false
+                    },
+                    "metadataFile" : true,
+                    "objectType" : "COMPONENT",
+                    "params" : [ ],
+                    "parentObjectCode" : 628273920,
+                    "properties" : {
+                      "closeAfterSearch" : true,
+                      "lazyLoadDetail" : false,
+                      "modal" : false,
+                      "openOnShow" : true,
+                      "orientation" : "TOP",
+                      "responsive" : false
+                    }
+                  } ],
                   "cmdkMetadataCustomization" : false,
                   "code" : 628273920,
                   "componentType" : "WDBPANEL",
@@ -80,7 +105,8 @@
                 "description" : "Region 0",
                 "displayOrder" : 1,
                 "objectType" : "REGION",
-                "parentObjectCode" : 628264006
+                "parentObjectCode" : 628264006,
+                "tabGroupSelection" : false
               } ],
               "code" : 628264006,
               "description" : "Master region",
