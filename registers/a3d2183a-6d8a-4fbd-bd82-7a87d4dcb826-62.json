@@ -1,0 +1,202 @@
+{
+  "changes" : [ {
+    "event_info" : {
+      "date" : "11/02/2026 20:39:42",
+      "sequence" : 700060,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "af0a830e-a312-43bb-a119-82527daaadd6"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_TRG_PROJ_ELEMENT_BF_INSERT",
+      "old_value" : "VVRE_TRG_PROJ_ELEMENT_BF_INSERT"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_TRG_PROJ_ELEMENT_BF_INSERT",
+      "old_value" : "VVRE_TRG_PROJ_ELEMENT_BF_INSERT"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "CREATE OR REPLACE TRIGGER VVRE_TRG_PROJ_ELEMENT_BF_INSERT\nBEFORE INSERT ON VVRE_PROJ_ELEMENT\nFOR EACH ROW\nDECLARE\n    v_total_elementos   NUMBER := 0;\n    v_limite_projeto    NUMBER := 0;\nBEGIN\n    VVRE_GERAR_HIST_PROJ_COMP (3, 'Processo de valida\u00e7\u00e3o de dados');\n    -- Soma dos elementos j\u00e1 existentes para o projeto\n    SELECT NVL(SUM(VL_ELEMENTO), 0)\n    INTO v_total_elementos\n    FROM VVRE_PROJ_ELEMENT\n    WHERE NR_SEQ_PROJETO = :NEW.NR_SEQ_PROJETO;\n\n    -- Buscar limite permitido do projeto\n    SELECT (VL_PROJETO - VL_SALDO)\n    INTO v_limite_projeto\n    FROM VVRE_PROJ_COMPRAS\n    WHERE NR_SEQUENCIA = :NEW.NR_SEQ_PROJETO;\n\n    -- Valida\u00e7\u00e3o\n    IF (v_total_elementos + :NEW.VL_ELEMENTO) > v_limite_projeto THEN\n        RAISE_APPLICATION_ERROR(\n            -20001,\n            'Valor do elemento ultrapassa o limite dispon\u00edvel do projeto.'\n        );\n    END IF;\n\nEXCEPTION\n    WHEN NO_DATA_FOUND THEN\n        RAISE_APPLICATION_ERROR(\n            -20002,\n            'Projeto n\u00e3o encontrado na VVRE_PROJ_COMPRAS.'\n        );\nEND;\n/",
+      "old_value" : "CREATE OR REPLACE TRIGGER VVRE_TRG_PROJ_ELEMENT_BF_INSERT\nBEFORE INSERT ON VVRE_PROJ_ELEMENT\nFOR EACH ROW\nDECLARE\n    v_total_elementos   NUMBER := 0;\n    v_limite_projeto    NUMBER := 0;\nBEGIN\n    VVRE_GERAR_HIST_PROJ_COMP (:NEW.NR_SEQ_PROJETO, 'Processo de valida\u00e7\u00e3o de dados');\n    -- Soma dos elementos j\u00e1 existentes para o projeto\n    SELECT NVL(SUM(VL_ELEMENTO), 0)\n    INTO v_total_elementos\n    FROM VVRE_PROJ_ELEMENT\n    WHERE NR_SEQ_PROJETO = :NEW.NR_SEQ_PROJETO;\n\n    -- Buscar limite permitido do projeto\n    SELECT (VL_PROJETO - VL_SALDO)\n    INTO v_limite_projeto\n    FROM VVRE_PROJ_COMPRAS\n    WHERE NR_SEQUENCIA = :NEW.NR_SEQ_PROJETO;\n\n    -- Valida\u00e7\u00e3o\n    IF (v_total_elementos + :NEW.VL_ELEMENTO) > v_limite_projeto THEN\n        RAISE_APPLICATION_ERROR(\n            -20001,\n            'Valor do elemento ultrapassa o limite dispon\u00edvel do projeto.'\n        );\n    END IF;\n\nEXCEPTION\n    WHEN NO_DATA_FOUND THEN\n        RAISE_APPLICATION_ERROR(\n            -20002,\n            'Projeto n\u00e3o encontrado na VVRE_PROJ_COMPRAS.'\n        );\nEND;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10169457,
+      "old_value" : 10169457
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "11/02/2026 20:39:42",
+      "sequence" : 700061,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "b536ffca-23e0-4936-b958-1197cd5549e8"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_TRG_PROJ_ELEMENT_BF_INSERT",
+      "old_value" : "VVRE_TRG_PROJ_ELEMENT_BF_INSERT"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_TRG_PROJ_ELEMENT_BF_INSERT",
+      "old_value" : "VVRE_TRG_PROJ_ELEMENT_BF_INSERT"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10169457,
+      "old_value" : 10169457
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "11/02/2026 20:39:42",
+      "sequence" : 700062,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "DELETE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "ecfb1cef-5dbf-4dd3-b2b3-2fc471e7fb3b"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "VVRE_TRG_PROJ_ELEMENT_BF_INSERT"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "VVRE_TRG_PROJ_ELEMENT_BF_INSERT"
+    }, {
+      "column_name" : "IE_MEMORIA",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "N"
+    }, {
+      "column_name" : "DT_CRIACAO",
+      "data_type" : "DATE",
+      "new_value" : null,
+      "old_value" : "11/02/2026 17:39:41"
+    }, {
+      "column_name" : "DS_APLICACAO",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "Tasy"
+    }, {
+      "column_name" : "NM_USUARIO",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "jefsoares"
+    }, {
+      "column_name" : "IE_GERAR_SCRIPT",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "S"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "Oracle"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : null,
+      "old_value" : "CREATE OR REPLACE TRIGGER VVRE_TRG_PROJ_ELEMENT_BF_INSERT\nBEFORE INSERT ON VVRE_PROJ_ELEMENT\nFOR EACH ROW\nDECLARE\n    v_total_elementos   NUMBER := 0;\n    v_limite_projeto    NUMBER := 0;\nBEGIN\n    VVRE_GERAR_HIST_PROJ_COMP (3, 'Processo de valida\u00e7\u00e3o de dados');\n    -- Soma dos elementos j\u00e1 existentes para o projeto\n    SELECT NVL(SUM(VL_ELEMENTO), 0)\n    INTO v_total_elementos\n    FROM VVRE_PROJ_ELEMENT\n    WHERE NR_SEQ_PROJETO = :NEW.NR_SEQ_PROJETO;\n\n    -- Buscar limite permitido do projeto\n    SELECT (VL_PROJETO - VL_SALDO)\n    INTO v_limite_projeto\n    FROM VVRE_PROJ_COMPRAS\n    WHERE NR_SEQUENCIA = :NEW.NR_SEQ_PROJETO;\n\n    -- Valida\u00e7\u00e3o\n    IF (v_total_elementos + :NEW.VL_ELEMENTO) > v_limite_projeto THEN\n        RAISE_APPLICATION_ERROR(\n            -20001,\n            'Valor do elemento ultrapassa o limite dispon\u00edvel do projeto.'\n        );\n    END IF;\n\nEXCEPTION\n    WHEN NO_DATA_FOUND THEN\n        RAISE_APPLICATION_ERROR(\n            -20002,\n            'Projeto n\u00e3o encontrado na VVRE_PROJ_COMPRAS.'\n        );\nEND;\n/"
+    }, {
+      "column_name" : "DT_ATUALIZACAO",
+      "data_type" : "DATE",
+      "new_value" : null,
+      "old_value" : "11/02/2026 20:27:54"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : null,
+      "old_value" : 10169457
+    }, {
+      "column_name" : "IE_CRIPTOGRAFIA",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "N"
+    }, {
+      "column_name" : "DS_LAYER",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "CORE.VIVERE"
+    } ]
+  } ]
+}
