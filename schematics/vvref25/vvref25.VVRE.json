@@ -30,20 +30,20 @@
                   "children" : [ {
                     "children" : [ ],
                     "cmdkMetadataCustomization" : true,
-                    "code" : 819386268,
+                    "code" : 822350098,
                     "componentType" : "WFILTRO",
                     "customProperties" : {
                       "enableMultiFilters" : "N"
                     },
-                    "description" : "Filter",
+                    "description" : "Filter - Projetos",
                     "dictionaryCode" : 819392589,
                     "experimentalFeatures" : {
-                      "experimentalForm" : true
+                      "experimentalForm" : false
                     },
                     "metadataFile" : true,
                     "objectType" : "COMPONENT",
                     "params" : [ ],
-                    "parentObjectCode" : 628273920,
+                    "parentObjectCode" : 822248199,
                     "properties" : {
                       "closeAfterSearch" : true,
                       "lazyLoadDetail" : false,
@@ -52,9 +52,62 @@
                       "orientation" : "TOP",
                       "responsive" : false
                     }
+                  }, {
+                    "code" : 823034960,
+                    "componentType" : "WPOPUP",
+                    "description" : "Botão direto",
+                    "displayOrder" : 1,
+                    "menuItems" : [ {
+                      "aiContextMenu" : false,
+                      "alignment" : "E",
+                      "children" : [ ],
+                      "code" : 823046088,
+                      "componentType" : "MENUITEM",
+                      "enabled" : true,
+                      "events" : [ {
+                        "eventActions" : [ {
+                          "actionOrder" : 1,
+                          "actionSeq" : 823075280,
+                          "eventAction" : "PROC",
+                          "multipleBodyItemsSupported" : false,
+                          "params" : [ {
+                            "code" : 823091994,
+                            "defaultValue" : "3",
+                            "originParam" : "DEFAULT",
+                            "parameterName" : "P_NR_SEQ_PROJETO",
+                            "parameterSeq" : 1
+                          }, {
+                            "code" : 823091995,
+                            "defaultValue" : "teste",
+                            "originParam" : "DEFAULT",
+                            "parameterName" : "P_DS_HISTORICO",
+                            "parameterSeq" : 2
+                          } ],
+                          "procedureCode" : 10169437,
+                          "reloadLine" : "S"
+                        } ],
+                        "eventSeq" : 823075279,
+                        "eventType" : "C"
+                      } ],
+                      "expressionCode" : 1148855,
+                      "menuCode" : 823034960,
+                      "metadataFile" : false,
+                      "name" : "Histórico Projeto",
+                      "objectType" : "COMPONENT",
+                      "order" : 1,
+                      "parentObjectCode" : 823034960,
+                      "rules" : [ ],
+                      "text" : "Histórico Projeto",
+                      "topList" : false,
+                      "type" : "STANDARD",
+                      "visible" : true
+                    } ],
+                    "objectType" : "COMPONENT",
+                    "parentObjectCode" : 822248199,
+                    "popUpHandle" : "N"
                   } ],
                   "cmdkMetadataCustomization" : false,
-                  "code" : 628273920,
+                  "code" : 822248199,
                   "componentType" : "WDBPANEL",
                   "crudRules" : [ ],
                   "customProperties" : {
@@ -62,7 +115,7 @@
                     "showDynamicReport" : "N",
                     "withoutCache" : "N"
                   },
-                  "description" : "DB - Projetos",
+                  "description" : "DbPanel - Projeto",
                   "displayOrder" : 1,
                   "isMaster" : false,
                   "legends" : [ ],
@@ -70,7 +123,7 @@
                   "metadataFile" : true,
                   "objectType" : "COMPONENT",
                   "params" : [ ],
-                  "parentObjectCode" : 628264007,
+                  "parentObjectCode" : 822228754,
                   "properties" : {
                     "action" : "",
                     "activateOnDetail" : false,
@@ -101,35 +154,148 @@
                   "signatureConfigured" : false,
                   "viewCode" : 628277219
                 } ],
-                "code" : 628264007,
+                "code" : 822228754,
                 "description" : "Region 0",
                 "displayOrder" : 1,
                 "objectType" : "REGION",
-                "parentObjectCode" : 628264006,
-                "tabGroupSelection" : false
+                "parentObjectCode" : 822228753
               } ],
-              "code" : 628264006,
+              "code" : 822228753,
               "description" : "Master region",
               "masterRegionType" : "LAYOUT_A",
               "objectType" : "MASTER_REGION",
-              "parentObjectCode" : 628114562
+              "parentObjectCode" : 822222528
             } ],
-            "code" : 628114562,
+            "code" : 822222528,
             "description" : "Panel",
             "displayOrder" : 1,
             "expressionCode" : 314879,
             "expressionDescription" : "Panel",
             "objectType" : "PANEL",
-            "panelWidth" : 12,
-            "parentObjectCode" : 628114561
+            "panelWidth" : 6,
+            "parentObjectCode" : 822222527
+          }, {
+            "children" : [ {
+              "allowCmdkCustomization" : true,
+              "restrictPrimaryLevel" : "N",
+              "restrictSecondaryLevel" : "N",
+              "restrictTertiaryLevel" : "N",
+              "children" : [ {
+                "allowCmdkCustomization" : true,
+                "restrictPrimaryLevel" : "N",
+                "restrictSecondaryLevel" : "N",
+                "restrictTertiaryLevel" : "N",
+                "children" : [ {
+                  "children" : [ {
+                    "children" : [ {
+                      "children" : [ ],
+                      "cmdkMetadataCustomization" : true,
+                      "code" : 822392403,
+                      "componentType" : "WCPANEL",
+                      "customProperties" : {
+                        "showDynamicReport" : "N"
+                      },
+                      "description" : "CPanel - Historico Projeto",
+                      "dictionaryCode" : 822395361,
+                      "displayOrder" : 1,
+                      "legends" : [ ],
+                      "metadataFile" : true,
+                      "objectType" : "COMPONENT",
+                      "params" : [ {
+                        "code" : 823768403,
+                        "function" : 0,
+                        "masterCode" : 822248199,
+                        "masterName" : "NR_SEQUENCIA",
+                        "originParam" : "OBJECT",
+                        "parameterCode" : 0,
+                        "parameterName" : "NR_SEQ_PROJETO ",
+                        "parameterSeq" : 0,
+                        "parentObjectCode" : 822392403
+                      } ],
+                      "parentObjectCode" : 822383650,
+                      "properties" : {
+                        "autoCreateChild" : false,
+                        "editableGrid" : false,
+                        "emptyActivation" : false,
+                        "multiSelection" : false,
+                        "paginationType" : "P",
+                        "reportConfigVisible" : false,
+                        "saveGridColumnOrder" : false,
+                        "selectFirstRow" : false,
+                        "unificarCountRegistros" : false,
+                        "useNewGrid" : true
+                      },
+                      "reports" : [ ]
+                    } ],
+                    "code" : 822383650,
+                    "description" : "Region 0",
+                    "displayOrder" : 1,
+                    "objectType" : "REGION",
+                    "parentObjectCode" : 822383649
+                  } ],
+                  "code" : 822383649,
+                  "description" : "Master region",
+                  "masterRegionType" : "LAYOUT_A",
+                  "objectType" : "MASTER_REGION",
+                  "parentObjectCode" : 822293713
+                } ],
+                "code" : 822293713,
+                "configurable" : true,
+                "hasObjSchemRules" : false,
+                "description" : "Histórico Projeto",
+                "displayOrder" : 1,
+                "expressionCode" : 1148855,
+                "expressionDescription" : "Histórico Projeto",
+                "objectType" : "TAB",
+                "parentObjectCode" : 822293712,
+                "topList" : false,
+                "visible" : "S"
+              }, {
+                "allowCmdkCustomization" : true,
+                "restrictPrimaryLevel" : "N",
+                "restrictSecondaryLevel" : "N",
+                "restrictTertiaryLevel" : "N",
+                "children" : [ ],
+                "code" : 822304825,
+                "configurable" : true,
+                "hasObjSchemRules" : false,
+                "description" : "Histórico Projeto",
+                "displayOrder" : 2,
+                "expressionCode" : 1148855,
+                "expressionDescription" : "Histórico Projeto",
+                "objectType" : "TAB",
+                "parentObjectCode" : 822293712,
+                "topList" : false,
+                "visible" : "S"
+              } ],
+              "code" : 822293712,
+              "configurable" : false,
+              "hasObjSchemRules" : false,
+              "description" : "Tab",
+              "displayOrder" : 0,
+              "navigatorType" : "TAB",
+              "objectType" : "NAVIGATOR",
+              "parentObjectCode" : 822222529,
+              "selectedNavigatorItem" : 822293713,
+              "topList" : false,
+              "visible" : "S"
+            } ],
+            "code" : 822222529,
+            "description" : "Panel",
+            "displayOrder" : 2,
+            "expressionCode" : 314879,
+            "expressionDescription" : "Panel",
+            "objectType" : "PANEL",
+            "panelWidth" : 6,
+            "parentObjectCode" : 822222527
           } ],
-          "code" : 628114561,
+          "code" : 822222527,
           "componentType" : "WSCH",
           "description" : "Schematic - 12",
           "objectType" : "SCHEMATIC",
-          "parentObjectCode" : 627766536
+          "parentObjectCode" : 822204890
         } ],
-        "code" : 627766536,
+        "code" : 822204890,
         "configurable" : true,
         "hasObjSchemRules" : false,
         "description" : "Projeto de compras",
@@ -146,7 +312,7 @@
       "navigatorType" : "DROP_DOWN_MENU",
       "objectType" : "NAVIGATOR",
       "parentObjectCode" : 0,
-      "selectedNavigatorItem" : 0,
+      "selectedNavigatorItem" : 822204890,
       "version" : "1.7.0"
     }
   } ],
