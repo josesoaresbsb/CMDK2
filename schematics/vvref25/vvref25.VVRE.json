@@ -29,7 +29,7 @@
                   "checkParentsRelease" : false,
                   "children" : [ {
                     "children" : [ ],
-                    "cmdkMetadataCustomization" : false,
+                    "cmdkMetadataCustomization" : true,
                     "code" : 819386268,
                     "componentType" : "WFILTRO",
                     "customProperties" : {
@@ -38,7 +38,7 @@
                     "description" : "Filter",
                     "dictionaryCode" : 819392589,
                     "experimentalFeatures" : {
-                      "experimentalForm" : false
+                      "experimentalForm" : true
                     },
                     "metadataFile" : true,
                     "objectType" : "COMPONENT",
@@ -48,7 +48,7 @@
                       "closeAfterSearch" : true,
                       "lazyLoadDetail" : false,
                       "modal" : false,
-                      "openOnShow" : true,
+                      "openOnShow" : false,
                       "orientation" : "TOP",
                       "responsive" : false
                     }
@@ -120,31 +120,7 @@
             "expressionCode" : 314879,
             "expressionDescription" : "Panel",
             "objectType" : "PANEL",
-            "panelWidth" : 6,
-            "parentObjectCode" : 628114561
-          }, {
-            "children" : [ {
-              "children" : [ {
-                "children" : [ ],
-                "code" : 628604281,
-                "description" : "Region 0",
-                "displayOrder" : 1,
-                "objectType" : "REGION",
-                "parentObjectCode" : 628604280
-              } ],
-              "code" : 628604280,
-              "description" : "Master region",
-              "masterRegionType" : "LAYOUT_A",
-              "objectType" : "MASTER_REGION",
-              "parentObjectCode" : 628114563
-            } ],
-            "code" : 628114563,
-            "description" : "Panel",
-            "displayOrder" : 2,
-            "expressionCode" : 314879,
-            "expressionDescription" : "Panel",
-            "objectType" : "PANEL",
-            "panelWidth" : 6,
+            "panelWidth" : 12,
             "parentObjectCode" : 628114561
           } ],
           "code" : 628114561,
