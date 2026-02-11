@@ -1,0 +1,426 @@
+{
+  "changes" : [ {
+    "event_info" : {
+      "date" : "11/02/2026 20:32:38",
+      "sequence" : 500053,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "INSERT",
+      "table_name" : "INDICE_ATRIBUTO",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "d357db79-71b5-4288-b4b9-49b12b6cbf5b"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_TABELA",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_HIST_PROJ",
+      "old_value" : null
+    }, {
+      "column_name" : "NM_INDICE",
+      "data_type" : "VARCHAR2",
+      "new_value" : "HISPORS_PK",
+      "old_value" : null
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 1,
+      "old_value" : null
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_TABELA",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_HIST_PROJ",
+      "old_value" : null
+    }, {
+      "column_name" : "DT_ATUALIZACAO",
+      "data_type" : "DATE",
+      "new_value" : "11/02/2026 20:00:30",
+      "old_value" : null
+    }, {
+      "column_name" : "NM_INDICE",
+      "data_type" : "VARCHAR2",
+      "new_value" : "HISPORS_PK",
+      "old_value" : null
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 1,
+      "old_value" : null
+    }, {
+      "column_name" : "NM_USUARIO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "jefsoares",
+      "old_value" : null
+    }, {
+      "column_name" : "NM_ATRIBUTO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "NR_SEQUENCIA",
+      "old_value" : null
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "11/02/2026 20:32:38",
+      "sequence" : 500054,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "INSERT",
+      "table_name" : "INDICE",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "ab2d6830-b3b4-4f71-86e3-21da26788dfd"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_TABELA",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_HIST_PROJ",
+      "old_value" : null
+    }, {
+      "column_name" : "NM_INDICE",
+      "data_type" : "VARCHAR2",
+      "new_value" : "HISPORS_PROJ_FK",
+      "old_value" : null
+    } ],
+    "column_values" : [ {
+      "column_name" : "DS_INDICE",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Vinculo Projeto X Historico",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_TIPO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "I",
+      "old_value" : null
+    }, {
+      "column_name" : "NM_USUARIO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "jefsoares",
+      "old_value" : null
+    }, {
+      "column_name" : "DT_CRIACAO",
+      "data_type" : "DATE",
+      "new_value" : "11/02/2026 20:11:25",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_SITUACAO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "A",
+      "old_value" : null
+    }, {
+      "column_name" : "NM_INDICE",
+      "data_type" : "VARCHAR2",
+      "new_value" : "HISPORS_PROJ_FK",
+      "old_value" : null
+    }, {
+      "column_name" : "NM_TABELA",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_HIST_PROJ",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_CRIAR_ALTERAR",
+      "data_type" : "VARCHAR2",
+      "new_value" : "I",
+      "old_value" : null
+    }, {
+      "column_name" : "DT_ATUALIZACAO",
+      "data_type" : "DATE",
+      "new_value" : "11/02/2026 20:11:25",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_IGNORADO_CLIENTE",
+      "data_type" : "VARCHAR2",
+      "new_value" : "N",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_CLASSIFICACAO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "IS",
+      "old_value" : null
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "11/02/2026 20:32:38",
+      "sequence" : 500055,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "INDICE",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "17fe165e-f4bb-4d5a-9d20-f926b29ee6a3"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_TABELA",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_HIST_PROJ",
+      "old_value" : "VVRE_HIST_PROJ"
+    }, {
+      "column_name" : "NM_INDICE",
+      "data_type" : "VARCHAR2",
+      "new_value" : "HISPORS_PROJ_FK",
+      "old_value" : "HISPORS_PROJ_FK"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_TABELA",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_HIST_PROJ",
+      "old_value" : "VVRE_HIST_PROJ"
+    }, {
+      "column_name" : "IE_CLASSIFICACAO",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "IS"
+    }, {
+      "column_name" : "DS_MENSAGEM",
+      "data_type" : "VARCHAR2",
+      "new_value" : "",
+      "old_value" : null
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "11/02/2026 20:32:38",
+      "sequence" : 500056,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "INSERT",
+      "table_name" : "INDICE_ATRIBUTO",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "c74783fd-f51e-43a2-b8d6-749c56a73213"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_TABELA",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_HIST_PROJ",
+      "old_value" : null
+    }, {
+      "column_name" : "NM_INDICE",
+      "data_type" : "VARCHAR2",
+      "new_value" : "HISPORS_PROJ_FK",
+      "old_value" : null
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 3,
+      "old_value" : null
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_TABELA",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_HIST_PROJ",
+      "old_value" : null
+    }, {
+      "column_name" : "DT_ATUALIZACAO",
+      "data_type" : "DATE",
+      "new_value" : "11/02/2026 20:12:25",
+      "old_value" : null
+    }, {
+      "column_name" : "NM_INDICE",
+      "data_type" : "VARCHAR2",
+      "new_value" : "HISPORS_PROJ_FK",
+      "old_value" : null
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 3,
+      "old_value" : null
+    }, {
+      "column_name" : "NM_USUARIO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "jefsoares",
+      "old_value" : null
+    }, {
+      "column_name" : "NM_ATRIBUTO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "NR_SEQ_PROJETO",
+      "old_value" : null
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "11/02/2026 20:32:38",
+      "sequence" : 700057,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "INSERT",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "f0477ca5-495a-4e00-9eb4-c13258b2bf83"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_TRG_PROJ_ELEMENT_BF_INSERT",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : null
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_TRG_PROJ_ELEMENT_BF_INSERT",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_MEMORIA",
+      "data_type" : "VARCHAR2",
+      "new_value" : "N",
+      "old_value" : null
+    }, {
+      "column_name" : "DT_CRIACAO",
+      "data_type" : "DATE",
+      "new_value" : "11/02/2026 17:32:37",
+      "old_value" : null
+    }, {
+      "column_name" : "DS_APLICACAO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Tasy",
+      "old_value" : null
+    }, {
+      "column_name" : "NM_USUARIO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "jefsoares",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_GERAR_SCRIPT",
+      "data_type" : "VARCHAR2",
+      "new_value" : "S",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : null
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "CREATE OR REPLACE TRIGGER VVRE_TRG_PROJ_ELEMENT_BF_INSERT\nBEFORE INSERT ON VVRE_PROJ_ELEMENT\nFOR EACH ROW\nDECLARE\n    v_total_elementos   NUMBER := 0;\n    v_limite_projeto    NUMBER := 0;\nBEGIN\n    -- Soma dos elementos j\u00e1 existentes para o projeto\n    SELECT NVL(SUM(VL_ELEMENTO), 0)\n    INTO v_total_elementos\n    FROM VVRE_PROJ_ELEMENT\n    WHERE NR_SEQ_PROJETO = :NEW.NR_SEQ_PROJETO;\n\n    -- Buscar limite permitido do projeto\n    SELECT (VL_PROJETO - VL_SALDO)\n    INTO v_limite_projeto\n    FROM VVRE_PROJ_COMPRAS\n    WHERE NR_SEQUENCIA = :NEW.NR_SEQ_PROJETO;\n\n    -- Valida\u00e7\u00e3o\n    IF (v_total_elementos + :NEW.VL_ELEMENTO) > v_limite_projeto THEN\n        RAISE_APPLICATION_ERROR(\n            -20001,\n            'Valor do elemento ultrapassa o limite dispon\u00edvel do projeto.'\n        );\n    END IF;\n\nEXCEPTION\n    WHEN NO_DATA_FOUND THEN\n        RAISE_APPLICATION_ERROR(\n            -20002,\n            'Projeto n\u00e3o encontrado na VVRE_PROJ_COMPRAS.'\n        );\nEND;\n/",
+      "old_value" : null
+    }, {
+      "column_name" : "DT_ATUALIZACAO",
+      "data_type" : "DATE",
+      "new_value" : "11/02/2026 20:27:54",
+      "old_value" : null
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10169457,
+      "old_value" : null
+    }, {
+      "column_name" : "IE_CRIPTOGRAFIA",
+      "data_type" : "VARCHAR2",
+      "new_value" : "N",
+      "old_value" : null
+    }, {
+      "column_name" : "DS_LAYER",
+      "data_type" : "VARCHAR2",
+      "new_value" : "CORE.VIVERE",
+      "old_value" : null
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "11/02/2026 20:32:38",
+      "sequence" : 700058,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "5248ebb8-f849-4412-b202-ecd696b307a1"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_TRG_PROJ_ELEMENT_BF_INSERT",
+      "old_value" : "VVRE_TRG_PROJ_ELEMENT_BF_INSERT"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_TRG_PROJ_ELEMENT_BF_INSERT",
+      "old_value" : "VVRE_TRG_PROJ_ELEMENT_BF_INSERT"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "CREATE OR REPLACE TRIGGER VVRE_TRG_PROJ_ELEMENT_BF_INSERT\nBEFORE INSERT ON VVRE_PROJ_ELEMENT\nFOR EACH ROW\nDECLARE\n    v_total_elementos   NUMBER := 0;\n    v_limite_projeto    NUMBER := 0;\nBEGIN\n    VVRE_GERAR_HIST_PROJ_COMP (:NEW.NR_SEQ_PROJETO, 'Processo de valida\u00e7\u00e3o de dados');\n    -- Soma dos elementos j\u00e1 existentes para o projeto\n    SELECT NVL(SUM(VL_ELEMENTO), 0)\n    INTO v_total_elementos\n    FROM VVRE_PROJ_ELEMENT\n    WHERE NR_SEQ_PROJETO = :NEW.NR_SEQ_PROJETO;\n\n    -- Buscar limite permitido do projeto\n    SELECT (VL_PROJETO - VL_SALDO)\n    INTO v_limite_projeto\n    FROM VVRE_PROJ_COMPRAS\n    WHERE NR_SEQUENCIA = :NEW.NR_SEQ_PROJETO;\n\n    -- Valida\u00e7\u00e3o\n    IF (v_total_elementos + :NEW.VL_ELEMENTO) > v_limite_projeto THEN\n        RAISE_APPLICATION_ERROR(\n            -20001,\n            'Valor do elemento ultrapassa o limite dispon\u00edvel do projeto.'\n        );\n    END IF;\n\nEXCEPTION\n    WHEN NO_DATA_FOUND THEN\n        RAISE_APPLICATION_ERROR(\n            -20002,\n            'Projeto n\u00e3o encontrado na VVRE_PROJ_COMPRAS.'\n        );\nEND;\n/",
+      "old_value" : "CREATE OR REPLACE TRIGGER VVRE_TRG_PROJ_ELEMENT_BF_INSERT\nBEFORE INSERT ON VVRE_PROJ_ELEMENT\nFOR EACH ROW\nDECLARE\n    v_total_elementos   NUMBER := 0;\n    v_limite_projeto    NUMBER := 0;\nBEGIN\n    -- Soma dos elementos j\u00e1 existentes para o projeto\n    SELECT NVL(SUM(VL_ELEMENTO), 0)\n    INTO v_total_elementos\n    FROM VVRE_PROJ_ELEMENT\n    WHERE NR_SEQ_PROJETO = :NEW.NR_SEQ_PROJETO;\n\n    -- Buscar limite permitido do projeto\n    SELECT (VL_PROJETO - VL_SALDO)\n    INTO v_limite_projeto\n    FROM VVRE_PROJ_COMPRAS\n    WHERE NR_SEQUENCIA = :NEW.NR_SEQ_PROJETO;\n\n    -- Valida\u00e7\u00e3o\n    IF (v_total_elementos + :NEW.VL_ELEMENTO) > v_limite_projeto THEN\n        RAISE_APPLICATION_ERROR(\n            -20001,\n            'Valor do elemento ultrapassa o limite dispon\u00edvel do projeto.'\n        );\n    END IF;\n\nEXCEPTION\n    WHEN NO_DATA_FOUND THEN\n        RAISE_APPLICATION_ERROR(\n            -20002,\n            'Projeto n\u00e3o encontrado na VVRE_PROJ_COMPRAS.'\n        );\nEND;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10169457,
+      "old_value" : 10169457
+    } ]
+  } ]
+}
