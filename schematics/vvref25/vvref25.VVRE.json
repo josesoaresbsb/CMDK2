@@ -68,36 +68,53 @@
                         "eventActions" : [ {
                           "actionOrder" : 1,
                           "actionSeq" : 823075280,
+                          "compReactivateCode" : 822248199,
                           "eventAction" : "PROC",
                           "multipleBodyItemsSupported" : false,
                           "params" : [ {
-                            "code" : 823091994,
-                            "defaultValue" : "3",
-                            "originParam" : "DEFAULT",
+                            "code" : 836872629,
+                            "masterCode" : 822248199,
+                            "masterName" : "NR_SEQUENCIA",
+                            "originParam" : "OBJECT",
                             "parameterName" : "P_NR_SEQ_PROJETO",
                             "parameterSeq" : 1
-                          }, {
-                            "code" : 823091995,
-                            "defaultValue" : "teste",
-                            "originParam" : "DEFAULT",
-                            "parameterName" : "P_DS_HISTORICO",
-                            "parameterSeq" : 2
                           } ],
-                          "procedureCode" : 10169437,
+                          "procedureCode" : 10169439,
                           "reloadLine" : "S"
                         } ],
                         "eventSeq" : 823075279,
                         "eventType" : "C"
                       } ],
-                      "expressionCode" : 1148855,
+                      "expressionCode" : 317436,
                       "menuCode" : 823034960,
                       "metadataFile" : false,
-                      "name" : "Histórico Projeto",
+                      "name" : "Approve proposal ",
                       "objectType" : "COMPONENT",
                       "order" : 1,
                       "parentObjectCode" : 823034960,
-                      "rules" : [ ],
-                      "text" : "Histórico Projeto",
+                      "rules" : [ {
+                        "conditionDescription" : "Validar Stutas",
+                        "conditions" : [ {
+                          "baseAttribute" : "IE_STATUS",
+                          "condition" : "=",
+                          "conditionSeq" : 837092802,
+                          "option" : "ATTRIBUTE WITH VALUE",
+                          "referenceObjectCode" : 822248199,
+                          "scriptReference" : 822248199,
+                          "value" : "AP"
+                        } ],
+                        "nrSeqRule" : 837077248,
+                        "result" : "ENABLED"
+                      } ],
+                      "shortCutDto" : {
+                        "alt" : false,
+                        "ctrl" : true,
+                        "ieAtalho" : "1",
+                        "itemCode" : 823046088,
+                        "keyCode" : 49,
+                        "shift" : true
+                      },
+                      "text" : "Approve proposal ",
                       "topList" : false,
                       "type" : "STANDARD",
                       "visible" : true
@@ -117,7 +134,7 @@
                   },
                   "description" : "DbPanel - Projeto",
                   "displayOrder" : 1,
-                  "isMaster" : false,
+                  "isMaster" : true,
                   "legends" : [ ],
                   "masterObjectCode" : 0,
                   "metadataFile" : true,
@@ -188,52 +205,75 @@
                 "children" : [ {
                   "children" : [ {
                     "children" : [ {
+                      "checkParentsRelease" : false,
                       "children" : [ ],
-                      "cmdkMetadataCustomization" : true,
-                      "code" : 822392403,
-                      "componentType" : "WCPANEL",
+                      "cmdkMetadataCustomization" : false,
+                      "code" : 835602512,
+                      "componentType" : "WDBPANEL",
+                      "crudRules" : [ ],
                       "customProperties" : {
-                        "showDynamicReport" : "N"
+                        "allowBatchSignature" : "N",
+                        "showDynamicReport" : "N",
+                        "withoutCache" : "N"
                       },
-                      "description" : "CPanel - Historico Projeto",
-                      "dictionaryCode" : 822395361,
+                      "description" : "DbPanel - Historico Projeto",
                       "displayOrder" : 1,
+                      "isMaster" : false,
                       "legends" : [ ],
+                      "masterObjectCode" : 822248199,
                       "metadataFile" : true,
                       "objectType" : "COMPONENT",
                       "params" : [ {
-                        "code" : 823768403,
+                        "code" : 836124077,
+                        "criteria" : 836098681,
                         "function" : 0,
                         "masterCode" : 822248199,
                         "masterName" : "NR_SEQUENCIA",
                         "originParam" : "OBJECT",
                         "parameterCode" : 0,
-                        "parameterName" : "NR_SEQ_PROJETO ",
+                        "parameterName" : "NR_SEQ_PROJETO",
                         "parameterSeq" : 0,
-                        "parentObjectCode" : 822392403
+                        "parentObjectCode" : 835602512
                       } ],
-                      "parentObjectCode" : 822383650,
+                      "parentObjectCode" : 835596328,
                       "properties" : {
+                        "action" : "",
+                        "activateOnDetail" : false,
                         "autoCreateChild" : false,
+                        "cacheDetailViews" : false,
+                        "checkReportRelease" : true,
+                        "confirmReleaseRecord" : false,
+                        "destroyDetail" : false,
                         "editableGrid" : false,
                         "emptyActivation" : false,
+                        "gridWhenSave" : true,
+                        "lazyLoadDetail" : false,
                         "multiSelection" : false,
+                        "onlyDetail" : false,
+                        "pageSize" : 0,
                         "paginationType" : "P",
+                        "qtMaxRecord" : 0,
+                        "readOnlyType" : "N",
                         "reportConfigVisible" : false,
+                        "responsive" : false,
                         "saveGridColumnOrder" : false,
                         "selectFirstRow" : false,
-                        "unificarCountRegistros" : false,
-                        "useNewGrid" : true
+                        "unificarCountRegistros" : true,
+                        "useNewGrid" : true,
+                        "usePagination" : true
                       },
-                      "reports" : [ ]
+                      "reports" : [ ],
+                      "signatureConfigured" : false,
+                      "viewActivator" : 836098681,
+                      "viewCode" : 821632430
                     } ],
-                    "code" : 822383650,
+                    "code" : 835596328,
                     "description" : "Region 0",
                     "displayOrder" : 1,
                     "objectType" : "REGION",
-                    "parentObjectCode" : 822383649
+                    "parentObjectCode" : 835596327
                   } ],
-                  "code" : 822383649,
+                  "code" : 835596327,
                   "description" : "Master region",
                   "masterRegionType" : "LAYOUT_A",
                   "objectType" : "MASTER_REGION",
@@ -255,7 +295,21 @@
                 "restrictPrimaryLevel" : "N",
                 "restrictSecondaryLevel" : "N",
                 "restrictTertiaryLevel" : "N",
-                "children" : [ ],
+                "children" : [ {
+                  "children" : [ {
+                    "children" : [ ],
+                    "code" : 835587230,
+                    "description" : "Region 0",
+                    "displayOrder" : 1,
+                    "objectType" : "REGION",
+                    "parentObjectCode" : 835587229
+                  } ],
+                  "code" : 835587229,
+                  "description" : "Master region",
+                  "masterRegionType" : "LAYOUT_A",
+                  "objectType" : "MASTER_REGION",
+                  "parentObjectCode" : 822304825
+                } ],
                 "code" : 822304825,
                 "configurable" : true,
                 "hasObjSchemRules" : false,
