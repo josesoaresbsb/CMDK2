@@ -67,7 +67,7 @@
                     "reportConfigVisible" : false,
                     "responsive" : false,
                     "saveGridColumnOrder" : false,
-                    "selectFirstRow" : false,
+                    "selectFirstRow" : true,
                     "unificarCountRegistros" : true,
                     "useNewGrid" : true,
                     "usePagination" : true
