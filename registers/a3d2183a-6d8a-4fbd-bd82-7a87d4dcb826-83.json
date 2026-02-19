@@ -1,0 +1,1291 @@
+{
+  "changes" : [ {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700063,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "DELETE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "4af2e39c-06bd-4a54-98ed-88525a6f0bb7"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "VVRE_TROCA_STATUS_PROJ_COMP2"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "VVRE_TROCA_STATUS_PROJ_COMP2"
+    }, {
+      "column_name" : "IE_MEMORIA",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "N"
+    }, {
+      "column_name" : "DT_CRIACAO",
+      "data_type" : "DATE",
+      "new_value" : null,
+      "old_value" : "19/02/2026 17:55:32"
+    }, {
+      "column_name" : "DS_APLICACAO",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "Tasy"
+    }, {
+      "column_name" : "NM_USUARIO",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "jefsoares"
+    }, {
+      "column_name" : "IE_GERAR_SCRIPT",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "S"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "Oracle"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "PROCEDURE"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : null,
+      "old_value" : "CREATE OR REPLACE PROCEDURE VVRE_TROCA_STATUS_PROJ_COMP2 (\n    P_NR_SEQ_PROJETO IN VVRE_PROJ_COMPRAS.NR_SEQUENCIA%TYPE,\n    P_IE_STATUS IN VVRE_PROJ_COMPRAS.IE_STATUS %TYPE)\nIS\n    V_NR_SEQUENCIA VVRE_HIST_PROJ.NR_SEQUENCIA%TYPE;\nBEGIN\n\n    -- Insere o registro\n    UPDATE VVRE_PROJ_COMPRAS SET IE_STATUS = P_IE_STATUS, DT_ATUALIZACAO = sysdate,\n    NM_USUARIO = obter_usuario_ativo\n    where NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    \n    -- Gerar hist\u00f3ricos\n    VVRE_GERAR_HIST_PROJ_COMP(P_NR_SEQ_PROJETO,'Troca de status realizada. /n Status: '||P_IE_STATUS || ', Usuario: '|| obter_usuario_ativo);\n\n    COMMIT;\nEXCEPTION\n    WHEN OTHERS THEN\n        ROLLBACK;\n        RAISE;\nEND VVRE_TROCA_STATUS_PROJ_COMP2;\n/"
+    }, {
+      "column_name" : "DT_ATUALIZACAO",
+      "data_type" : "DATE",
+      "new_value" : null,
+      "old_value" : "11/02/2026 19:24:23"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : null,
+      "old_value" : 10169441
+    }, {
+      "column_name" : "IE_CRIPTOGRAFIA",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "N"
+    }, {
+      "column_name" : "DS_LAYER",
+      "data_type" : "VARCHAR2",
+      "new_value" : null,
+      "old_value" : "CORE.VIVERE"
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700064,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "INSERT",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "96bf6e7e-c97d-4317-8c7e-b5d1afc56891"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : null
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_MEMORIA",
+      "data_type" : "VARCHAR2",
+      "new_value" : "N",
+      "old_value" : null
+    }, {
+      "column_name" : "DT_CRIACAO",
+      "data_type" : "DATE",
+      "new_value" : "19/02/2026 17:55:32",
+      "old_value" : null
+    }, {
+      "column_name" : "DS_APLICACAO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Tasy",
+      "old_value" : null
+    }, {
+      "column_name" : "NM_USUARIO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "jefsoares",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_GERAR_SCRIPT",
+      "data_type" : "VARCHAR2",
+      "new_value" : "S",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : null
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "CREATE OR REPLACE TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n    IF :NEW.VL_PROJETO <= 0 THEN\n        RAISE_APPLICATION_ERROR(\n            -20001,\n            'El valor de VL_PROJETO debe ser mayor que cero.'\n        );\n    END IF;\nEND;\n/",
+      "old_value" : null
+    }, {
+      "column_name" : "DT_ATUALIZACAO",
+      "data_type" : "DATE",
+      "new_value" : "18/02/2026 20:28:43",
+      "old_value" : null
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170480,
+      "old_value" : null
+    }, {
+      "column_name" : "IE_CRIPTOGRAFIA",
+      "data_type" : "VARCHAR2",
+      "new_value" : "N",
+      "old_value" : null
+    }, {
+      "column_name" : "DS_LAYER",
+      "data_type" : "VARCHAR2",
+      "new_value" : "CORE.VIVERE",
+      "old_value" : null
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700065,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "e398afba-6073-4cec-9e96-530e031b6f4a"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "create or replace TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n    IF :NEW.VL_PROJETO <= 0 THEN\n        raise_application_error(-20011,'El valor de VL_PROJETO debe ser mayor que cero.');\n    END IF;\nEND;\n/",
+      "old_value" : "CREATE OR REPLACE TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n    IF :NEW.VL_PROJETO <= 0 THEN\n        RAISE_APPLICATION_ERROR(\n            -20001,\n            'El valor de VL_PROJETO debe ser mayor que cero.'\n        );\n    END IF;\nEND;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170480,
+      "old_value" : 10170480
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700066,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "5a656960-485b-4728-ae2c-3e3a0ccb4db3"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170480,
+      "old_value" : 10170480
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700067,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "80ad5bc8-3f02-4d99-8f4b-8123dd88e00e"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "create or replace TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n    IF :NEW.VL_PROJETO <= 0 THEN\n        raise_application_error(-20011,'El valor de VL_PROJETO debe ser mayor que cero.');\n        wheb_mensagem_pck.exibir_mensagem_abort(1144309);\n    END IF;\nEND;\n/",
+      "old_value" : "create or replace TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n    IF :NEW.VL_PROJETO <= 0 THEN\n        raise_application_error(-20011,'El valor de VL_PROJETO debe ser mayor que cero.');\n    END IF;\nEND;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170480,
+      "old_value" : 10170480
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700068,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "INSERT",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "f481e52f-0491-4883-b0a3-230eb56206ac"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : null
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_MEMORIA",
+      "data_type" : "VARCHAR2",
+      "new_value" : "N",
+      "old_value" : null
+    }, {
+      "column_name" : "DT_CRIACAO",
+      "data_type" : "DATE",
+      "new_value" : "19/02/2026 17:55:32",
+      "old_value" : null
+    }, {
+      "column_name" : "DS_APLICACAO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Tasy",
+      "old_value" : null
+    }, {
+      "column_name" : "NM_USUARIO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "jefsoares",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_GERAR_SCRIPT",
+      "data_type" : "VARCHAR2",
+      "new_value" : "S",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "PROCEDURE",
+      "old_value" : null
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "CREATE OR REPLACE PROCEDURE VVRE_ATUALIZAR_STATUS_PROJ_COMP (\n    P_NR_SEQ_PROJETO IN VVRE_PROJ_COMPRAS.NR_SEQUENCIA%TYPE,\n    IE_STATUS_P   IN VVRE_PROJ_COMPRAS.IE_STATUS%TYPE\n)\nIS\nBEGIN\n\n    -- Atualiza status\n\n    UPDATE VVRE_PROJ_COMPRAS SET IE_STATUS = IE_STATUS_p\n\tWHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n\t\n\t-- Gerar Historico de atualiza\u00e7\u00e3o\n\tVVRE_GERAR_HIST_PROJ_COMP(P_NR_SEQ_PROJETO,'Status do projeto atualizado para '|| IE_STATUS_p ||'. Realizado por '|| obter_usuario_ativo);\n\n    COMMIT;\n\nEXCEPTION\n    WHEN OTHERS THEN\n\t    wheb_mensagem_pck.exibir_mensagem_abort(188140,'NR_COT_COMPRA=' || P_NR_SEQ_PROJETO);\n        ROLLBACK;\n        RAISE;\nEND VVRE_ATUALIZAR_STATUS_PROJ_COMP;\n/",
+      "old_value" : null
+    }, {
+      "column_name" : "DT_ATUALIZACAO",
+      "data_type" : "DATE",
+      "new_value" : "19/02/2026 15:24:58",
+      "old_value" : null
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170643,
+      "old_value" : null
+    }, {
+      "column_name" : "IE_CRIPTOGRAFIA",
+      "data_type" : "VARCHAR2",
+      "new_value" : "N",
+      "old_value" : null
+    }, {
+      "column_name" : "DS_LAYER",
+      "data_type" : "VARCHAR2",
+      "new_value" : "CORE.VIVERE",
+      "old_value" : null
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700069,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "e1285578-39bb-4d02-8f10-237dd907c9cc"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP",
+      "old_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP",
+      "old_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "PROCEDURE",
+      "old_value" : "PROCEDURE"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "CREATE OR REPLACE PROCEDURE VVRE_ATUALIZAR_STATUS_PROJ_COMP (\n    P_NR_SEQ_PROJETO IN VVRE_PROJ_COMPRAS.NR_SEQUENCIA%TYPE,\n    IE_STATUS_P   IN VVRE_PROJ_COMPRAS.IE_STATUS%TYPE\n)\nIS\nBEGIN\t\n\t-- Atualiza status\n    CASE IE_STATUS_P\n    WHEN 'EX' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_APROVACAO = sysdate, DT_PAUSA = null, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'PP' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_PAUSA = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'NA' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_FINALIZACAO = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    ELSE\n      wheb_mensagem_pck.exibir_mensagem_abort(188140,'NR_COT_COMPRA=' || P_NR_SEQ_PROJETO);\n\t  ROLLBACK;\n    END CASE;\n\t\n\t-- Gerar Historico de atualiza\u00e7\u00e3o\n\tVVRE_GERAR_HIST_PROJ_COMP(P_NR_SEQ_PROJETO,'Status do projeto atualizado para '|| obter_valor_dominio(22338,IE_STATUS_p) ||'. Realizado por '|| obter_usuario_ativo);\n\n    COMMIT;\n\nEXCEPTION\n    WHEN OTHERS THEN\n\t    wheb_mensagem_pck.exibir_mensagem_abort(188140,'NR_COT_COMPRA=' || P_NR_SEQ_PROJETO);\n        ROLLBACK;\n        RAISE;\nEND VVRE_ATUALIZAR_STATUS_PROJ_COMP;\n/",
+      "old_value" : "CREATE OR REPLACE PROCEDURE VVRE_ATUALIZAR_STATUS_PROJ_COMP (\n    P_NR_SEQ_PROJETO IN VVRE_PROJ_COMPRAS.NR_SEQUENCIA%TYPE,\n    IE_STATUS_P   IN VVRE_PROJ_COMPRAS.IE_STATUS%TYPE\n)\nIS\nBEGIN\n\n    -- Atualiza status\n\n    UPDATE VVRE_PROJ_COMPRAS SET IE_STATUS = IE_STATUS_p\n\tWHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n\t\n\t-- Gerar Historico de atualiza\u00e7\u00e3o\n\tVVRE_GERAR_HIST_PROJ_COMP(P_NR_SEQ_PROJETO,'Status do projeto atualizado para '|| IE_STATUS_p ||'. Realizado por '|| obter_usuario_ativo);\n\n    COMMIT;\n\nEXCEPTION\n    WHEN OTHERS THEN\n\t    wheb_mensagem_pck.exibir_mensagem_abort(188140,'NR_COT_COMPRA=' || P_NR_SEQ_PROJETO);\n        ROLLBACK;\n        RAISE;\nEND VVRE_ATUALIZAR_STATUS_PROJ_COMP;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170643,
+      "old_value" : 10170643
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700070,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "cfd5bb0d-101c-45ea-84c5-b96b4bcbb594"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP",
+      "old_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP",
+      "old_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "PROCEDURE",
+      "old_value" : "PROCEDURE"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "CREATE OR REPLACE PROCEDURE VVRE_ATUALIZAR_STATUS_PROJ_COMP (\n    P_NR_SEQ_PROJETO IN VVRE_PROJ_COMPRAS.NR_SEQUENCIA%TYPE,\n    IE_STATUS_P   IN VVRE_PROJ_COMPRAS.IE_STATUS%TYPE\n)\nIS\nBEGIN\t\n\t-- Atualiza status\n    CASE IE_STATUS_P\n    WHEN 'EX' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_APROVACAO = sysdate, DT_PAUSA = null, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'PP' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_PAUSA = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'NA' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_FINALIZACAO = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n\tWHEN 'PF' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_FINALIZACAO = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    \n    ELSE\n      wheb_mensagem_pck.exibir_mensagem_abort(188140,'NR_COT_COMPRA=' || P_NR_SEQ_PROJETO);\n\t  ROLLBACK;\n    END CASE;\n\t\n\t-- Gerar Historico de atualiza\u00e7\u00e3o\n\tVVRE_GERAR_HIST_PROJ_COMP(P_NR_SEQ_PROJETO,'Status do projeto atualizado para '|| obter_valor_dominio(22338,IE_STATUS_p) ||'. Realizado por '|| obter_usuario_ativo);\n\n    COMMIT;\n\nEXCEPTION\n    WHEN OTHERS THEN\n\t    wheb_mensagem_pck.exibir_mensagem_abort(188140,'NR_COT_COMPRA=' || P_NR_SEQ_PROJETO);\n        ROLLBACK;\n        RAISE;\nEND VVRE_ATUALIZAR_STATUS_PROJ_COMP;\n/",
+      "old_value" : "CREATE OR REPLACE PROCEDURE VVRE_ATUALIZAR_STATUS_PROJ_COMP (\n    P_NR_SEQ_PROJETO IN VVRE_PROJ_COMPRAS.NR_SEQUENCIA%TYPE,\n    IE_STATUS_P   IN VVRE_PROJ_COMPRAS.IE_STATUS%TYPE\n)\nIS\nBEGIN\t\n\t-- Atualiza status\n    CASE IE_STATUS_P\n    WHEN 'EX' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_APROVACAO = sysdate, DT_PAUSA = null, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'PP' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_PAUSA = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'NA' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_FINALIZACAO = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    ELSE\n      wheb_mensagem_pck.exibir_mensagem_abort(188140,'NR_COT_COMPRA=' || P_NR_SEQ_PROJETO);\n\t  ROLLBACK;\n    END CASE;\n\t\n\t-- Gerar Historico de atualiza\u00e7\u00e3o\n\tVVRE_GERAR_HIST_PROJ_COMP(P_NR_SEQ_PROJETO,'Status do projeto atualizado para '|| obter_valor_dominio(22338,IE_STATUS_p) ||'. Realizado por '|| obter_usuario_ativo);\n\n    COMMIT;\n\nEXCEPTION\n    WHEN OTHERS THEN\n\t    wheb_mensagem_pck.exibir_mensagem_abort(188140,'NR_COT_COMPRA=' || P_NR_SEQ_PROJETO);\n        ROLLBACK;\n        RAISE;\nEND VVRE_ATUALIZAR_STATUS_PROJ_COMP;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170643,
+      "old_value" : 10170643
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700071,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "4244bd72-c44f-4c8c-bfa1-c9f3b61d7af9"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP",
+      "old_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP",
+      "old_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "PROCEDURE",
+      "old_value" : "PROCEDURE"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "CREATE OR REPLACE PROCEDURE VVRE_ATUALIZAR_STATUS_PROJ_COMP (\n    P_NR_SEQ_PROJETO IN VVRE_PROJ_COMPRAS.NR_SEQUENCIA%TYPE,\n    IE_STATUS_P   IN VVRE_PROJ_COMPRAS.IE_STATUS%TYPE\n)\nIS\nBEGIN\t\n\t-- Atualiza status\n    CASE IE_STATUS_P\n    WHEN 'EX' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_APROVACAO = sysdate, DT_PAUSA = null, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'PP' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_PAUSA = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'NA' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_FINALIZACAO = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n\tWHEN 'PF' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_FINALIZACAO = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'AP' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_APROVACAO = null, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    ELSE\n      wheb_mensagem_pck.exibir_mensagem_abort(188140,'NR_COT_COMPRA=' || P_NR_SEQ_PROJETO);\n\t  ROLLBACK;\n    END CASE;\n\t\n\t-- Gerar Historico de atualiza\u00e7\u00e3o\n\tVVRE_GERAR_HIST_PROJ_COMP(P_NR_SEQ_PROJETO,'Status do projeto atualizado para '|| obter_valor_dominio(22338,IE_STATUS_p) ||'. Realizado por '|| obter_usuario_ativo);\n\n    COMMIT;\n\nEXCEPTION\n    WHEN OTHERS THEN\n\t    wheb_mensagem_pck.exibir_mensagem_abort(188140,'NR_COT_COMPRA=' || P_NR_SEQ_PROJETO);\n        ROLLBACK;\n        RAISE;\nEND VVRE_ATUALIZAR_STATUS_PROJ_COMP;\n/",
+      "old_value" : "CREATE OR REPLACE PROCEDURE VVRE_ATUALIZAR_STATUS_PROJ_COMP (\n    P_NR_SEQ_PROJETO IN VVRE_PROJ_COMPRAS.NR_SEQUENCIA%TYPE,\n    IE_STATUS_P   IN VVRE_PROJ_COMPRAS.IE_STATUS%TYPE\n)\nIS\nBEGIN\t\n\t-- Atualiza status\n    CASE IE_STATUS_P\n    WHEN 'EX' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_APROVACAO = sysdate, DT_PAUSA = null, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'PP' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_PAUSA = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'NA' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_FINALIZACAO = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n\tWHEN 'PF' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_FINALIZACAO = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    \n    ELSE\n      wheb_mensagem_pck.exibir_mensagem_abort(188140,'NR_COT_COMPRA=' || P_NR_SEQ_PROJETO);\n\t  ROLLBACK;\n    END CASE;\n\t\n\t-- Gerar Historico de atualiza\u00e7\u00e3o\n\tVVRE_GERAR_HIST_PROJ_COMP(P_NR_SEQ_PROJETO,'Status do projeto atualizado para '|| obter_valor_dominio(22338,IE_STATUS_p) ||'. Realizado por '|| obter_usuario_ativo);\n\n    COMMIT;\n\nEXCEPTION\n    WHEN OTHERS THEN\n\t    wheb_mensagem_pck.exibir_mensagem_abort(188140,'NR_COT_COMPRA=' || P_NR_SEQ_PROJETO);\n        ROLLBACK;\n        RAISE;\nEND VVRE_ATUALIZAR_STATUS_PROJ_COMP;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170643,
+      "old_value" : 10170643
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700072,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "9b82e840-0886-49d3-961b-6a09c2dfa662"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "create or replace TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n  IF :NEW.IE_STATUS = 'AP' THEN\n    IF :NEW.VL_PROJETO <= 0 THEN\n        raise_application_error(-20011,'O valor do projeto deve ser maior que zero.');\n        wheb_mensagem_pck.exibir_mensagem_abort(1144309);\n    END IF;\n   ELSE\n\t\traise_application_error(-20011,'N\u00e3o \u00e9 possivel alterar dados de projetos aprovados.');\n   END IF\nEND;\n/",
+      "old_value" : "create or replace TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n    IF :NEW.VL_PROJETO <= 0 THEN\n        raise_application_error(-20011,'El valor de VL_PROJETO debe ser mayor que cero.');\n        wheb_mensagem_pck.exibir_mensagem_abort(1144309);\n    END IF;\nEND;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170480,
+      "old_value" : 10170480
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700073,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "a62db360-2831-4cf0-b4b5-5045b37e7926"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "create or replace TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n  IF :NEW.IE_STATUS = 'AP' THEN\n    IF :NEW.VL_PROJETO <= 0 THEN\n        raise_application_error(-20011,'O valor do projeto deve ser maior que zero.');\n        wheb_mensagem_pck.exibir_mensagem_abort(1144309);\n    END IF;\n   ELSE\n\t\traise_application_error(-20011,'N\u00e3o \u00e9 possivel alterar dados de projetos aprovados.');\n   END IF;\nEND;\n/",
+      "old_value" : "create or replace TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n  IF :NEW.IE_STATUS = 'AP' THEN\n    IF :NEW.VL_PROJETO <= 0 THEN\n        raise_application_error(-20011,'O valor do projeto deve ser maior que zero.');\n        wheb_mensagem_pck.exibir_mensagem_abort(1144309);\n    END IF;\n   ELSE\n\t\traise_application_error(-20011,'N\u00e3o \u00e9 possivel alterar dados de projetos aprovados.');\n   END IF\nEND;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170480,
+      "old_value" : 10170480
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700074,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "9b077029-6e94-4035-9aff-996bceab9eb8"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "create or replace TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n  IF :NEW.IE_STATUS != 'AP' THEN\n    raise_application_error(-20011,'N\u00e3o \u00e9 possivel alterar dados de projetos aprovados.');\n   ELSE\n        IF :NEW.VL_PROJETO <= 0 THEN\n        raise_application_error(-20011,'O valor do projeto deve ser maior que zero.');\n        wheb_mensagem_pck.exibir_mensagem_abort(1144309);\n    END IF;\n   END IF;\nEND;\n/",
+      "old_value" : "create or replace TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n  IF :NEW.IE_STATUS = 'AP' THEN\n    IF :NEW.VL_PROJETO <= 0 THEN\n        raise_application_error(-20011,'O valor do projeto deve ser maior que zero.');\n        wheb_mensagem_pck.exibir_mensagem_abort(1144309);\n    END IF;\n   ELSE\n\t\traise_application_error(-20011,'N\u00e3o \u00e9 possivel alterar dados de projetos aprovados.');\n   END IF;\nEND;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170480,
+      "old_value" : 10170480
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700075,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "d1a8b868-c86b-4432-af8b-4f704e47bd70"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP",
+      "old_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP",
+      "old_value" : "VVRE_ATUALIZAR_STATUS_PROJ_COMP"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "PROCEDURE",
+      "old_value" : "PROCEDURE"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "CREATE OR REPLACE PROCEDURE VVRE_ATUALIZAR_STATUS_PROJ_COMP (\n    P_NR_SEQ_PROJETO IN VVRE_PROJ_COMPRAS.NR_SEQUENCIA%TYPE,\n    IE_STATUS_P   IN VVRE_PROJ_COMPRAS.IE_STATUS%TYPE\n)\nIS\nBEGIN\t\n\t-- Atualiza status\n    CASE IE_STATUS_P\n    WHEN 'EX' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_APROVACAO = sysdate, DT_PAUSA = null, DT_FINALIZACAO = null, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'PP' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_PAUSA = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'NA' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_FINALIZACAO = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n\tWHEN 'PF' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_FINALIZACAO = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'AP' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_APROVACAO = null, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    ELSE\n      wheb_mensagem_pck.exibir_mensagem_abort(188140,'NR_COT_COMPRA=' || P_NR_SEQ_PROJETO);\n\t  ROLLBACK;\n    END CASE;\n\t\n\t-- Gerar Historico de atualiza\u00e7\u00e3o\n\tVVRE_GERAR_HIST_PROJ_COMP(P_NR_SEQ_PROJETO,'Status do projeto atualizado para '|| obter_valor_dominio(22338,IE_STATUS_p) ||'. Realizado por '|| obter_usuario_ativo);\n\n    COMMIT;\n\nEXCEPTION\n    WHEN OTHERS THEN\n\t    wheb_mensagem_pck.exibir_mensagem_abort(188140,'NR_COT_COMPRA=' || P_NR_SEQ_PROJETO);\n        ROLLBACK;\n        RAISE;\nEND VVRE_ATUALIZAR_STATUS_PROJ_COMP;\n/",
+      "old_value" : "CREATE OR REPLACE PROCEDURE VVRE_ATUALIZAR_STATUS_PROJ_COMP (\n    P_NR_SEQ_PROJETO IN VVRE_PROJ_COMPRAS.NR_SEQUENCIA%TYPE,\n    IE_STATUS_P   IN VVRE_PROJ_COMPRAS.IE_STATUS%TYPE\n)\nIS\nBEGIN\t\n\t-- Atualiza status\n    CASE IE_STATUS_P\n    WHEN 'EX' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_APROVACAO = sysdate, DT_PAUSA = null, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'PP' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_PAUSA = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'NA' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_FINALIZACAO = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n\tWHEN 'PF' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_FINALIZACAO = sysdate, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    WHEN 'AP' THEN\n      UPDATE VVRE_PROJ_COMPRAS SET DT_APROVACAO = null, DT_ATUALIZACAO = sysdate, NM_USUARIO = obter_usuario_ativo, IE_STATUS = IE_STATUS_p\n\t  WHERE NR_SEQUENCIA = P_NR_SEQ_PROJETO;\n    ELSE\n      wheb_mensagem_pck.exibir_mensagem_abort(188140,'NR_COT_COMPRA=' || P_NR_SEQ_PROJETO);\n\t  ROLLBACK;\n    END CASE;\n\t\n\t-- Gerar Historico de atualiza\u00e7\u00e3o\n\tVVRE_GERAR_HIST_PROJ_COMP(P_NR_SEQ_PROJETO,'Status do projeto atualizado para '|| obter_valor_dominio(22338,IE_STATUS_p) ||'. Realizado por '|| obter_usuario_ativo);\n\n    COMMIT;\n\nEXCEPTION\n    WHEN OTHERS THEN\n\t    wheb_mensagem_pck.exibir_mensagem_abort(188140,'NR_COT_COMPRA=' || P_NR_SEQ_PROJETO);\n        ROLLBACK;\n        RAISE;\nEND VVRE_ATUALIZAR_STATUS_PROJ_COMP;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170643,
+      "old_value" : 10170643
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700076,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "INSERT",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "4f08737b-641d-4ed5-9394-3d6b88dcf297"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : null
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_MEMORIA",
+      "data_type" : "VARCHAR2",
+      "new_value" : "N",
+      "old_value" : null
+    }, {
+      "column_name" : "DT_CRIACAO",
+      "data_type" : "DATE",
+      "new_value" : "19/02/2026 17:55:32",
+      "old_value" : null
+    }, {
+      "column_name" : "DS_APLICACAO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Tasy",
+      "old_value" : null
+    }, {
+      "column_name" : "NM_USUARIO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "jefsoares",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_GERAR_SCRIPT",
+      "data_type" : "VARCHAR2",
+      "new_value" : "S",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : null
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : null
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "CREATE OR REPLACE TRIGGER VVRE_PROJ_ELEMENT_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_ELEMENTO\nON VVRE_PROJ_ELEMENT\nFOR EACH ROW\n\nDECLARE\n    v_saldo_projeto   VVRE_PROJ_COMPRAS.VL_PROJETO%TYPE;\n    v_total_elemento  VVRE_PROJ_COMPRAS.VL_PROJETO%TYPE;\nBEGIN\n\n    -- Validar valor positivo\n    IF :NEW.VL_ELEMENTO <= 0 THEN\n        wheb_mensagem_pck.exibir_mensagem_abort(1144309);\n    END IF;\n\n    -- Obtener saldo disponible del proyecto\n    SELECT (VL_PROJETO - NVL(VL_SALDO,0))\n    INTO v_saldo_projeto\n    FROM VVRE_PROJ_COMPRAS\n    WHERE NR_SEQUENCIA = :NEW.NR_SEQ_PROJETO;\n\n    -- Obtener suma de los dem\u00e1s elementos del proyecto (sin el registro actual)\n\tSELECT NVL(SUM(VL_ELEMENTO),0)\n\tINTO v_total_elemento\n\tFROM VVRE_PROJ_ELEMENT\n\tWHERE NR_SEQ_PROJETO = :NEW.NR_SEQ_PROJETO\n\tAND (INSERTING OR NR_SEQUENCIA <> :OLD.NR_SEQUENCIA);\n\n    -- Ajustar si es UPDATE (evita doble conteo)\n    IF UPDATING THEN\n        v_total_elemento := v_total_elemento - NVL(:OLD.VL_ELEMENTO,0);\n    END IF;\n\n    -- Validar saldo\n    IF (v_total_elemento + :NEW.VL_ELEMENTO) > v_saldo_projeto THEN\n        wheb_mensagem_pck.exibir_mensagem_abort(1144311);\n    END IF;\n\nEND;\n/",
+      "old_value" : null
+    }, {
+      "column_name" : "DT_ATUALIZACAO",
+      "data_type" : "DATE",
+      "new_value" : "19/02/2026 16:49:54",
+      "old_value" : null
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170644,
+      "old_value" : null
+    }, {
+      "column_name" : "IE_CRIPTOGRAFIA",
+      "data_type" : "VARCHAR2",
+      "new_value" : "N",
+      "old_value" : null
+    }, {
+      "column_name" : "DS_LAYER",
+      "data_type" : "VARCHAR2",
+      "new_value" : "CORE.VIVERE",
+      "old_value" : null
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700077,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "8e64d4e9-70ac-41b0-9129-a826e98eea8c"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "CREATE OR REPLACE TRIGGER VVRE_PROJ_ELEMENT_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_ELEMENTO\nON VVRE_PROJ_ELEMENT\nFOR EACH ROW\n\nDECLARE\n    v_saldo_projeto   VVRE_PROJ_COMPRAS.VL_PROJETO%TYPE;\n    v_total_elemento  VVRE_PROJ_COMPRAS.VL_PROJETO%TYPE;\nBEGIN\n\n    -- Validar valor positivo\n    IF :NEW.VL_ELEMENTO <= 0 THEN\n        wheb_mensagem_pck.exibir_mensagem_abort(1144309);\n    END IF;\n\n    -- Obtener saldo disponible del proyecto\n    SELECT (VL_PROJETO - NVL(VL_SALDO,0))\n    INTO v_saldo_projeto\n    FROM VVRE_PROJ_COMPRAS\n    WHERE NR_SEQUENCIA = :NEW.NR_SEQ_PROJETO;\n\n    -- Obtener suma de los dem\u00e1s elementos del proyecto (sin el registro actual)\n\tSELECT NVL(SUM(VL_ELEMENTO),0)\n\tINTO v_total_elemento\n\tFROM VVRE_PROJ_ELEMENT\n\tWHERE NR_SEQ_PROJETO = :NEW.NR_SEQ_PROJETO;\n\n    -- Ajustar si es UPDATE (evita doble conteo)\n    IF UPDATING THEN\n        v_total_elemento := v_total_elemento - NVL(:OLD.VL_ELEMENTO,0);\n    END IF;\n\n    -- Validar saldo\n    IF (v_total_elemento + :NEW.VL_ELEMENTO) > v_saldo_projeto THEN\n        wheb_mensagem_pck.exibir_mensagem_abort(1144311);\n    END IF;\n\nEND;\n/",
+      "old_value" : "CREATE OR REPLACE TRIGGER VVRE_PROJ_ELEMENT_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_ELEMENTO\nON VVRE_PROJ_ELEMENT\nFOR EACH ROW\n\nDECLARE\n    v_saldo_projeto   VVRE_PROJ_COMPRAS.VL_PROJETO%TYPE;\n    v_total_elemento  VVRE_PROJ_COMPRAS.VL_PROJETO%TYPE;\nBEGIN\n\n    -- Validar valor positivo\n    IF :NEW.VL_ELEMENTO <= 0 THEN\n        wheb_mensagem_pck.exibir_mensagem_abort(1144309);\n    END IF;\n\n    -- Obtener saldo disponible del proyecto\n    SELECT (VL_PROJETO - NVL(VL_SALDO,0))\n    INTO v_saldo_projeto\n    FROM VVRE_PROJ_COMPRAS\n    WHERE NR_SEQUENCIA = :NEW.NR_SEQ_PROJETO;\n\n    -- Obtener suma de los dem\u00e1s elementos del proyecto (sin el registro actual)\n\tSELECT NVL(SUM(VL_ELEMENTO),0)\n\tINTO v_total_elemento\n\tFROM VVRE_PROJ_ELEMENT\n\tWHERE NR_SEQ_PROJETO = :NEW.NR_SEQ_PROJETO\n\tAND (INSERTING OR NR_SEQUENCIA <> :OLD.NR_SEQUENCIA);\n\n    -- Ajustar si es UPDATE (evita doble conteo)\n    IF UPDATING THEN\n        v_total_elemento := v_total_elemento - NVL(:OLD.VL_ELEMENTO,0);\n    END IF;\n\n    -- Validar saldo\n    IF (v_total_elemento + :NEW.VL_ELEMENTO) > v_saldo_projeto THEN\n        wheb_mensagem_pck.exibir_mensagem_abort(1144311);\n    END IF;\n\nEND;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170644,
+      "old_value" : 10170644
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700078,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "1bbdb010-4752-4157-83b7-e347cc651eb7"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "CREATE OR REPLACE TRIGGER VVRE_PROJ_ELEMENT_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_ELEMENTO\nON VVRE_PROJ_ELEMENT\nFOR EACH ROW\n\nDECLARE\n    v_saldo_projeto   VVRE_PROJ_COMPRAS.VL_PROJETO%TYPE;\n    v_total_elemento  VVRE_PROJ_COMPRAS.VL_PROJETO%TYPE;\nBEGIN\n\n    -- Validar valor positivo\n    IF :NEW.VL_ELEMENTO <= 0 THEN\n        raise_application_error(-20011,'O valor do elemento deve ser maior que zero.');\n    END IF;\n\n    -- Obtener saldo disponible del proyecto\n    SELECT (VL_PROJETO - NVL(VL_SALDO,0))\n    INTO v_saldo_projeto\n    FROM VVRE_PROJ_COMPRAS\n    WHERE NR_SEQUENCIA = :NEW.NR_SEQ_PROJETO;\n\n    -- Obtener suma de los dem\u00e1s elementos del proyecto (sin el registro actual)\n\tSELECT NVL(SUM(VL_ELEMENTO),0)\n\tINTO v_total_elemento\n\tFROM VVRE_PROJ_ELEMENT\n\tWHERE NR_SEQ_PROJETO = :NEW.NR_SEQ_PROJETO;\n\n    -- Ajustar si es UPDATE (evita doble conteo)\n    IF UPDATING THEN\n        v_total_elemento := v_total_elemento - NVL(:OLD.VL_ELEMENTO,0);\n    END IF;\n\n    -- Validar saldo\n    IF (v_total_elemento + :NEW.VL_ELEMENTO) > v_saldo_projeto THEN\n        raise_application_error(-20011,'O valor do elemento deve ser menor que o saldo do projeto.');\n    END IF;\n\nEND;\n/",
+      "old_value" : "CREATE OR REPLACE TRIGGER VVRE_PROJ_ELEMENT_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_ELEMENTO\nON VVRE_PROJ_ELEMENT\nFOR EACH ROW\n\nDECLARE\n    v_saldo_projeto   VVRE_PROJ_COMPRAS.VL_PROJETO%TYPE;\n    v_total_elemento  VVRE_PROJ_COMPRAS.VL_PROJETO%TYPE;\nBEGIN\n\n    -- Validar valor positivo\n    IF :NEW.VL_ELEMENTO <= 0 THEN\n        wheb_mensagem_pck.exibir_mensagem_abort(1144309);\n    END IF;\n\n    -- Obtener saldo disponible del proyecto\n    SELECT (VL_PROJETO - NVL(VL_SALDO,0))\n    INTO v_saldo_projeto\n    FROM VVRE_PROJ_COMPRAS\n    WHERE NR_SEQUENCIA = :NEW.NR_SEQ_PROJETO;\n\n    -- Obtener suma de los dem\u00e1s elementos del proyecto (sin el registro actual)\n\tSELECT NVL(SUM(VL_ELEMENTO),0)\n\tINTO v_total_elemento\n\tFROM VVRE_PROJ_ELEMENT\n\tWHERE NR_SEQ_PROJETO = :NEW.NR_SEQ_PROJETO;\n\n    -- Ajustar si es UPDATE (evita doble conteo)\n    IF UPDATING THEN\n        v_total_elemento := v_total_elemento - NVL(:OLD.VL_ELEMENTO,0);\n    END IF;\n\n    -- Validar saldo\n    IF (v_total_elemento + :NEW.VL_ELEMENTO) > v_saldo_projeto THEN\n        wheb_mensagem_pck.exibir_mensagem_abort(1144311);\n    END IF;\n\nEND;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170644,
+      "old_value" : 10170644
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700079,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "17d15d8a-6d33-4da3-ab0b-84a648878cb7"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "CREATE OR REPLACE TRIGGER VVRE_PROJ_ELEMENT_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_ELEMENTO\nON VVRE_PROJ_ELEMENT\nFOR EACH ROW\n\nDECLARE\n    v_saldo_projeto   VVRE_PROJ_COMPRAS.VL_PROJETO%TYPE;\n    v_total_elemento  VVRE_PROJ_COMPRAS.VL_PROJETO%TYPE;\nBEGIN\n\n    -- Validar valor positivo\n    IF :NEW.VL_ELEMENTO <= 0 THEN\n        raise_application_error(-20011,'O valor do elemento deve ser maior que zero.');\n\t\tROLLBACK;\n    END IF;\n\n    -- Obtener saldo disponible del proyecto\n    SELECT (VL_PROJETO - NVL(VL_SALDO,0))\n    INTO v_saldo_projeto\n    FROM VVRE_PROJ_COMPRAS\n    WHERE NR_SEQUENCIA = :NEW.NR_SEQ_PROJETO;\n\n    -- Obtener suma de los dem\u00e1s elementos del proyecto (sin el registro actual)\n\tSELECT NVL(SUM(VL_ELEMENTO),0)\n\tINTO v_total_elemento\n\tFROM VVRE_PROJ_ELEMENT\n\tWHERE NR_SEQ_PROJETO = :NEW.NR_SEQ_PROJETO;\n\n\n    -- Validar saldo\n    IF (v_total_elemento + :NEW.VL_ELEMENTO) > v_saldo_projeto THEN\n        raise_application_error(-20011,'O valor do elemento deve ser menor que o saldo do projeto.');\n\t\tROLLBACK;\n    END IF;\nEND;\n/",
+      "old_value" : "CREATE OR REPLACE TRIGGER VVRE_PROJ_ELEMENT_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_ELEMENTO\nON VVRE_PROJ_ELEMENT\nFOR EACH ROW\n\nDECLARE\n    v_saldo_projeto   VVRE_PROJ_COMPRAS.VL_PROJETO%TYPE;\n    v_total_elemento  VVRE_PROJ_COMPRAS.VL_PROJETO%TYPE;\nBEGIN\n\n    -- Validar valor positivo\n    IF :NEW.VL_ELEMENTO <= 0 THEN\n        raise_application_error(-20011,'O valor do elemento deve ser maior que zero.');\n    END IF;\n\n    -- Obtener saldo disponible del proyecto\n    SELECT (VL_PROJETO - NVL(VL_SALDO,0))\n    INTO v_saldo_projeto\n    FROM VVRE_PROJ_COMPRAS\n    WHERE NR_SEQUENCIA = :NEW.NR_SEQ_PROJETO;\n\n    -- Obtener suma de los dem\u00e1s elementos del proyecto (sin el registro actual)\n\tSELECT NVL(SUM(VL_ELEMENTO),0)\n\tINTO v_total_elemento\n\tFROM VVRE_PROJ_ELEMENT\n\tWHERE NR_SEQ_PROJETO = :NEW.NR_SEQ_PROJETO;\n\n    -- Ajustar si es UPDATE (evita doble conteo)\n    IF UPDATING THEN\n        v_total_elemento := v_total_elemento - NVL(:OLD.VL_ELEMENTO,0);\n    END IF;\n\n    -- Validar saldo\n    IF (v_total_elemento + :NEW.VL_ELEMENTO) > v_saldo_projeto THEN\n        raise_application_error(-20011,'O valor do elemento deve ser menor que o saldo do projeto.');\n    END IF;\n\nEND;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170644,
+      "old_value" : 10170644
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700080,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "171b5767-27d5-4fb4-b168-6d5266875ec5"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "create or replace TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n  IF :NEW.IE_STATUS != 'AP' THEN\n    raise_application_error(-20011,'N\u00e3o \u00e9 possivel alterar dados de projetos aprovados.');\n   ELSE\n        IF :NEW.VL_PROJETO <= 0 THEN\n        raise_application_error(-20011,'O valor do projeto deve ser maior que zero.');\n        wheb_mensagem_pck.exibir_mensagem_abort(1144309);\n\t\tELSE\n\t\t    :NEW.VL_SALDO = :NEW.VL_PROJETO\n\t\tEND IF;\n    END IF;\n   END IF;\nEND;\n/",
+      "old_value" : "create or replace TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n  IF :NEW.IE_STATUS != 'AP' THEN\n    raise_application_error(-20011,'N\u00e3o \u00e9 possivel alterar dados de projetos aprovados.');\n   ELSE\n        IF :NEW.VL_PROJETO <= 0 THEN\n        raise_application_error(-20011,'O valor do projeto deve ser maior que zero.');\n        wheb_mensagem_pck.exibir_mensagem_abort(1144309);\n    END IF;\n   END IF;\nEND;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170480,
+      "old_value" : 10170480
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700081,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "309950f5-6e29-40d4-a271-9d969bfd3285"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "create or replace TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n  IF :NEW.IE_STATUS != 'AP' THEN\n    raise_application_error(-20011,'N\u00e3o \u00e9 possivel alterar dados de projetos aprovados.');\n   ELSE\n        IF :NEW.VL_PROJETO <= 0 THEN\n        raise_application_error(-20011,'O valor do projeto deve ser maior que zero.');\n\t\tELSE\n\t\t    :NEW.VL_SALDO := :NEW.VL_PROJETO;\n\t\tEND IF;\n    END IF;\nEND;\n/",
+      "old_value" : "create or replace TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n  IF :NEW.IE_STATUS != 'AP' THEN\n    raise_application_error(-20011,'N\u00e3o \u00e9 possivel alterar dados de projetos aprovados.');\n   ELSE\n        IF :NEW.VL_PROJETO <= 0 THEN\n        raise_application_error(-20011,'O valor do projeto deve ser maior que zero.');\n        wheb_mensagem_pck.exibir_mensagem_abort(1144309);\n\t\tELSE\n\t\t    :NEW.VL_SALDO = :NEW.VL_PROJETO\n\t\tEND IF;\n    END IF;\n   END IF;\nEND;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170480,
+      "old_value" : 10170480
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700082,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "6e1b4a51-b10c-456c-b652-e4145e107e7d"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_ELEMENT_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "create or replace TRIGGER APP_EXTENSION.VVRE_PROJ_ELEMENT_INSERT_UPD_TRG\nFOR INSERT OR UPDATE OF VL_ELEMENTO\nON VVRE_PROJ_ELEMENT\nCOMPOUND TRIGGER\n\n    TYPE t_proj_tab IS TABLE OF VVRE_PROJ_ELEMENT.NR_SEQ_PROJETO%TYPE;\n    v_projetos t_proj_tab := t_proj_tab();\n\nBEFORE EACH ROW IS\nBEGIN\n    -- Validar valor positivo\n    IF :NEW.VL_ELEMENTO <= 0 THEN\n        raise_application_error(-20011,'O valor do elemento deve ser maior que zero.');\n    END IF;\n\n    -- Guardar projeto afectado\n    v_projetos.EXTEND;\n    v_projetos(v_projetos.COUNT) :=\n        NVL(:NEW.NR_SEQ_PROJETO, :OLD.NR_SEQ_PROJETO);\n\nEND BEFORE EACH ROW;\n\n\nAFTER STATEMENT IS\n    v_saldo_projeto   NUMBER;\n    v_total_elemento  NUMBER;\nBEGIN\n\n    FOR i IN 1 .. v_projetos.COUNT LOOP\n\n        -- Obtener saldo disponible\n        SELECT NVL(VL_SALDO,0)\n        INTO v_saldo_projeto\n        FROM VVRE_PROJ_COMPRAS\n        WHERE NR_SEQUENCIA = v_projetos(i)\n        FOR UPDATE;  -- evita concurrencia\n\n        -- Sumar todos los elementos ya persistidos\n        SELECT NVL(SUM(VL_ELEMENTO),0)\n        INTO v_total_elemento\n        FROM VVRE_PROJ_ELEMENT\n        WHERE NR_SEQ_PROJETO = v_projetos(i);\n\n        -- Validar\n        IF v_total_elemento > v_saldo_projeto THEN\n            raise_application_error(-20011,'A soma dos elementos excede o saldo do projeto.');\n        END IF;\n\n    END LOOP;\n\nEND AFTER STATEMENT;\n\nEND;\n/",
+      "old_value" : "CREATE OR REPLACE TRIGGER VVRE_PROJ_ELEMENT_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_ELEMENTO\nON VVRE_PROJ_ELEMENT\nFOR EACH ROW\n\nDECLARE\n    v_saldo_projeto   VVRE_PROJ_COMPRAS.VL_PROJETO%TYPE;\n    v_total_elemento  VVRE_PROJ_COMPRAS.VL_PROJETO%TYPE;\nBEGIN\n\n    -- Validar valor positivo\n    IF :NEW.VL_ELEMENTO <= 0 THEN\n        raise_application_error(-20011,'O valor do elemento deve ser maior que zero.');\n\t\tROLLBACK;\n    END IF;\n\n    -- Obtener saldo disponible del proyecto\n    SELECT (VL_PROJETO - NVL(VL_SALDO,0))\n    INTO v_saldo_projeto\n    FROM VVRE_PROJ_COMPRAS\n    WHERE NR_SEQUENCIA = :NEW.NR_SEQ_PROJETO;\n\n    -- Obtener suma de los dem\u00e1s elementos del proyecto (sin el registro actual)\n\tSELECT NVL(SUM(VL_ELEMENTO),0)\n\tINTO v_total_elemento\n\tFROM VVRE_PROJ_ELEMENT\n\tWHERE NR_SEQ_PROJETO = :NEW.NR_SEQ_PROJETO;\n\n\n    -- Validar saldo\n    IF (v_total_elemento + :NEW.VL_ELEMENTO) > v_saldo_projeto THEN\n        raise_application_error(-20011,'O valor do elemento deve ser menor que o saldo do projeto.');\n\t\tROLLBACK;\n    END IF;\nEND;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170644,
+      "old_value" : 10170644
+    } ]
+  }, {
+    "event_info" : {
+      "date" : "19/02/2026 20:55:33",
+      "sequence" : 700083,
+      "date_format" : "dd/mm/rrrr hh24:mi:ss",
+      "dml_operation" : "UPDATE",
+      "table_name" : "OBJETO_SISTEMA",
+      "tag_name" : "CMDK",
+      "tasy_user" : "jefsoares",
+      "guid" : "d0744679-0b82-45a1-8171-43063bca01cf"
+    },
+    "server_info" : {
+      "charset" : "AMERICAN_AMERICA.AL32UTF8",
+      "database_version" : "19.0",
+      "instance_name" : "phcdb1"
+    },
+    "session_info" : {
+      "machine" : "21ed9cb99a8a",
+      "os_user" : "root",
+      "tasy_user" : "jefsoares"
+    },
+    "primary_key_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_BANCO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "Oracle",
+      "old_value" : "Oracle"
+    } ],
+    "column_values" : [ {
+      "column_name" : "NM_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG",
+      "old_value" : "VVRE_PROJ_COMP_INSERT_UPD_TRG"
+    }, {
+      "column_name" : "IE_TIPO_OBJETO",
+      "data_type" : "VARCHAR2",
+      "new_value" : "TRIGGER",
+      "old_value" : "TRIGGER"
+    }, {
+      "column_name" : "DS_SCRIPT_CRIACAO",
+      "data_type" : "LONG",
+      "new_value" : "create or replace TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n  IF :NEW.IE_STATUS != 'AP' THEN\n  wheb_mensagem_pck.exibir_mensagem_abort('N\u00e3o \u00e9 possivel alterar dados de projetos aprovados.');\n   ELSE\n        IF :NEW.VL_PROJETO <= 0 THEN\n        raise_application_error(-20011,'O valor do projeto deve ser maior que zero.');\n\t\tELSE\n\t\t    :NEW.VL_SALDO := :NEW.VL_PROJETO;\n\t\tEND IF;\n    END IF;\nEND;\n/",
+      "old_value" : "create or replace TRIGGER VVRE_PROJ_COMP_INSERT_UPD_TRG\nBEFORE INSERT OR UPDATE OF VL_PROJETO\nON VVRE_PROJ_COMPRAS\nFOR EACH ROW\nBEGIN\n  IF :NEW.IE_STATUS != 'AP' THEN\n    raise_application_error(-20011,'N\u00e3o \u00e9 possivel alterar dados de projetos aprovados.');\n   ELSE\n        IF :NEW.VL_PROJETO <= 0 THEN\n        raise_application_error(-20011,'O valor do projeto deve ser maior que zero.');\n\t\tELSE\n\t\t    :NEW.VL_SALDO := :NEW.VL_PROJETO;\n\t\tEND IF;\n    END IF;\nEND;\n/"
+    }, {
+      "column_name" : "NR_SEQUENCIA",
+      "data_type" : "NUMBER",
+      "new_value" : 10170480,
+      "old_value" : 10170480
+    } ]
+  } ]
+}
