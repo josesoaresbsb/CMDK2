@@ -72,20 +72,20 @@
                           "eventAction" : "PROC",
                           "multipleBodyItemsSupported" : false,
                           "params" : [ {
-                            "code" : 838763393,
+                            "code" : 514738343,
                             "masterCode" : 822248199,
                             "masterName" : "NR_SEQUENCIA",
                             "originParam" : "OBJECT",
                             "parameterName" : "P_NR_SEQ_PROJETO",
                             "parameterSeq" : 1
                           }, {
-                            "code" : 838763394,
+                            "code" : 514738344,
                             "defaultValue" : "EX",
                             "originParam" : "DEFAULT",
-                            "parameterName" : "P_IE_STATUS",
+                            "parameterName" : "IE_STATUS_P",
                             "parameterSeq" : 2
                           } ],
-                          "procedureCode" : 10169441,
+                          "procedureCode" : 10170643,
                           "reloadLine" : "S"
                         } ],
                         "eventSeq" : 838749967,
@@ -124,6 +124,360 @@
                       "topList" : false,
                       "type" : "STANDARD",
                       "visible" : true
+                    }, {
+                      "aiContextMenu" : false,
+                      "alignment" : "E",
+                      "children" : [ ],
+                      "code" : 515297250,
+                      "componentType" : "MENUITEM",
+                      "enabled" : true,
+                      "events" : [ {
+                        "eventActions" : [ {
+                          "actionOrder" : 2,
+                          "actionSeq" : 515399540,
+                          "compReactivateCode" : 822248199,
+                          "eventAction" : "PROC",
+                          "multipleBodyItemsSupported" : false,
+                          "params" : [ {
+                            "code" : 515409089,
+                            "masterCode" : 822248199,
+                            "masterName" : "NR_SEQUENCIA",
+                            "originParam" : "OBJECT",
+                            "parameterName" : "P_NR_SEQ_PROJETO",
+                            "parameterSeq" : 1
+                          }, {
+                            "code" : 515409090,
+                            "defaultValue" : "PP",
+                            "originParam" : "DEFAULT",
+                            "parameterName" : "IE_STATUS_P",
+                            "parameterSeq" : 2
+                          } ],
+                          "procedureCode" : 10170643,
+                          "reloadLine" : "S"
+                        } ],
+                        "eventSeq" : 515399539,
+                        "eventType" : "C"
+                      } ],
+                      "expressionCode" : 322411,
+                      "menuCode" : 838680307,
+                      "metadataFile" : false,
+                      "name" : "Pause",
+                      "objectType" : "COMPONENT",
+                      "order" : 2,
+                      "parentObjectCode" : 838680307,
+                      "rules" : [ {
+                        "conditionDescription" : "Status",
+                        "conditions" : [ {
+                          "baseAttribute" : "IE_STATUS",
+                          "condition" : "=",
+                          "conditionSeq" : 515455647,
+                          "option" : "ATTRIBUTE WITH VALUE",
+                          "referenceObjectCode" : 822248199,
+                          "scriptReference" : 822248199,
+                          "value" : "EX"
+                        } ],
+                        "nrSeqRule" : 515436457,
+                        "result" : "ENABLED"
+                      } ],
+                      "text" : "Pause",
+                      "topList" : false,
+                      "type" : "STANDARD",
+                      "visible" : true
+                    }, {
+                      "aiContextMenu" : false,
+                      "alignment" : "E",
+                      "children" : [ ],
+                      "code" : 516442610,
+                      "componentType" : "MENUITEM",
+                      "enabled" : true,
+                      "events" : [ {
+                        "eventActions" : [ {
+                          "actionOrder" : 4,
+                          "actionSeq" : 516500552,
+                          "compReactivateCode" : 822248199,
+                          "eventAction" : "PROC",
+                          "multipleBodyItemsSupported" : false,
+                          "params" : [ {
+                            "code" : 516521226,
+                            "masterCode" : 822248199,
+                            "masterName" : "NR_SEQUENCIA",
+                            "originParam" : "OBJECT",
+                            "parameterName" : "P_NR_SEQ_PROJETO",
+                            "parameterSeq" : 1
+                          }, {
+                            "code" : 516521227,
+                            "defaultValue" : "NA",
+                            "originParam" : "DEFAULT",
+                            "parameterName" : "IE_STATUS_P",
+                            "parameterSeq" : 2
+                          } ],
+                          "procedureCode" : 10170643,
+                          "reloadLine" : "S"
+                        } ],
+                        "eventSeq" : 516500551,
+                        "eventType" : "C"
+                      } ],
+                      "expressionCode" : 321828,
+                      "menuCode" : 838680307,
+                      "metadataFile" : false,
+                      "name" : "Reject",
+                      "objectType" : "COMPONENT",
+                      "order" : 3,
+                      "parentObjectCode" : 838680307,
+                      "rules" : [ {
+                        "conditionDescription" : "Status",
+                        "conditions" : [ {
+                          "baseAttribute" : "IE_STATUS",
+                          "condition" : "=",
+                          "conditionSeq" : 516576151,
+                          "option" : "ATTRIBUTE WITH VALUE",
+                          "referenceObjectCode" : 822248199,
+                          "scriptReference" : 822248199,
+                          "value" : "AP"
+                        } ],
+                        "nrSeqRule" : 516569018,
+                        "result" : "ENABLED"
+                      } ],
+                      "text" : "Reject",
+                      "topList" : false,
+                      "type" : "STANDARD",
+                      "visible" : true
+                    }, {
+                      "aiContextMenu" : false,
+                      "alignment" : "E",
+                      "children" : [ ],
+                      "code" : 516662885,
+                      "componentType" : "MENUITEM",
+                      "enabled" : true,
+                      "events" : [ {
+                        "eventActions" : [ {
+                          "actionOrder" : 6,
+                          "actionSeq" : 516721196,
+                          "compReactivateCode" : 822248199,
+                          "eventAction" : "PROC",
+                          "multipleBodyItemsSupported" : false,
+                          "params" : [ {
+                            "code" : 516732933,
+                            "masterCode" : 822248199,
+                            "masterName" : "NR_SEQUENCIA",
+                            "originParam" : "OBJECT",
+                            "parameterName" : "P_NR_SEQ_PROJETO",
+                            "parameterSeq" : 1
+                          }, {
+                            "code" : 516732934,
+                            "defaultValue" : "PF",
+                            "originParam" : "DEFAULT",
+                            "parameterName" : "IE_STATUS_P",
+                            "parameterSeq" : 2
+                          } ],
+                          "procedureCode" : 10170643,
+                          "reloadLine" : "S"
+                        } ],
+                        "eventSeq" : 516721195,
+                        "eventType" : "C"
+                      } ],
+                      "expressionCode" : 320113,
+                      "menuCode" : 838680307,
+                      "metadataFile" : false,
+                      "name" : "Finish",
+                      "objectType" : "COMPONENT",
+                      "order" : 5,
+                      "parentObjectCode" : 838680307,
+                      "rules" : [ {
+                        "conditionDescription" : "Status",
+                        "conditions" : [ {
+                          "baseAttribute" : "IE_STATUS",
+                          "condition" : "=",
+                          "conditionSeq" : 516841985,
+                          "option" : "ATTRIBUTE WITH VALUE",
+                          "referenceObjectCode" : 822248199,
+                          "scriptReference" : 822248199,
+                          "value" : "EX"
+                        } ],
+                        "nrSeqRule" : 516837774,
+                        "result" : "ENABLED"
+                      } ],
+                      "text" : "Finish",
+                      "topList" : false,
+                      "type" : "STANDARD",
+                      "visible" : true
+                    }, {
+                      "aiContextMenu" : false,
+                      "alignment" : "E",
+                      "children" : [ ],
+                      "code" : 516922079,
+                      "componentType" : "MENUITEM",
+                      "enabled" : true,
+                      "events" : [ {
+                        "eventActions" : [ {
+                          "actionOrder" : 8,
+                          "actionSeq" : 516974663,
+                          "compReactivateCode" : 822248199,
+                          "eventAction" : "PROC",
+                          "multipleBodyItemsSupported" : false,
+                          "params" : [ {
+                            "code" : 516989137,
+                            "masterCode" : 822248199,
+                            "masterName" : "NR_SEQUENCIA",
+                            "originParam" : "OBJECT",
+                            "parameterName" : "P_NR_SEQ_PROJETO",
+                            "parameterSeq" : 1
+                          }, {
+                            "code" : 516989138,
+                            "defaultValue" : "EX",
+                            "originParam" : "DEFAULT",
+                            "parameterName" : "IE_STATUS_P",
+                            "parameterSeq" : 2
+                          } ],
+                          "procedureCode" : 10170643,
+                          "reloadLine" : "S"
+                        } ],
+                        "eventSeq" : 516974662,
+                        "eventType" : "C"
+                      } ],
+                      "expressionCode" : 1058366,
+                      "menuCode" : 838680307,
+                      "metadataFile" : false,
+                      "name" : "Restart",
+                      "objectType" : "COMPONENT",
+                      "order" : 8,
+                      "parentObjectCode" : 838680307,
+                      "rules" : [ {
+                        "conditionDescription" : "Status",
+                        "conditions" : [ {
+                          "baseAttribute" : "IE_STATUS",
+                          "condition" : "=",
+                          "conditionSeq" : 517016953,
+                          "option" : "ATTRIBUTE WITH VALUE",
+                          "referenceObjectCode" : 822248199,
+                          "scriptReference" : 822248199,
+                          "value" : "PP"
+                        } ],
+                        "nrSeqRule" : 517011817,
+                        "result" : "ENABLED"
+                      } ],
+                      "text" : "Restart",
+                      "topList" : false,
+                      "type" : "STANDARD",
+                      "visible" : true
+                    }, {
+                      "aiContextMenu" : false,
+                      "alignment" : "E",
+                      "children" : [ ],
+                      "code" : 517310231,
+                      "componentType" : "MENUITEM",
+                      "enabled" : true,
+                      "events" : [ {
+                        "eventActions" : [ {
+                          "actionOrder" : 9,
+                          "actionSeq" : 517344379,
+                          "compReactivateCode" : 822248199,
+                          "eventAction" : "PROC",
+                          "multipleBodyItemsSupported" : false,
+                          "params" : [ {
+                            "code" : 517357228,
+                            "masterCode" : 822248199,
+                            "masterName" : "NR_SEQUENCIA",
+                            "originParam" : "OBJECT",
+                            "parameterName" : "P_NR_SEQ_PROJETO",
+                            "parameterSeq" : 1
+                          }, {
+                            "code" : 517357229,
+                            "defaultValue" : "AP",
+                            "originParam" : "DEFAULT",
+                            "parameterName" : "IE_STATUS_P",
+                            "parameterSeq" : 2
+                          } ],
+                          "procedureCode" : 10170643,
+                          "reloadLine" : "S"
+                        } ],
+                        "eventSeq" : 517344378,
+                        "eventType" : "C"
+                      } ],
+                      "expressionCode" : 317804,
+                      "menuCode" : 838680307,
+                      "metadataFile" : false,
+                      "name" : "Undo approval ",
+                      "objectType" : "COMPONENT",
+                      "order" : 9,
+                      "parentObjectCode" : 838680307,
+                      "rules" : [ {
+                        "conditionDescription" : "Status",
+                        "conditions" : [ {
+                          "baseAttribute" : "IE_STATUS",
+                          "condition" : "=",
+                          "conditionSeq" : 517382548,
+                          "option" : "ATTRIBUTE WITH VALUE",
+                          "referenceObjectCode" : 822248199,
+                          "scriptReference" : 822248199,
+                          "value" : "EX"
+                        } ],
+                        "nrSeqRule" : 517377075,
+                        "result" : "ENABLED"
+                      } ],
+                      "text" : "Undo approval ",
+                      "topList" : false,
+                      "type" : "STANDARD",
+                      "visible" : true
+                    }, {
+                      "aiContextMenu" : false,
+                      "alignment" : "E",
+                      "children" : [ ],
+                      "code" : 518326413,
+                      "componentType" : "MENUITEM",
+                      "enabled" : true,
+                      "events" : [ {
+                        "eventActions" : [ {
+                          "actionOrder" : 10,
+                          "actionSeq" : 518344455,
+                          "compReactivateCode" : 822248199,
+                          "eventAction" : "PROC",
+                          "multipleBodyItemsSupported" : false,
+                          "params" : [ {
+                            "code" : 518355861,
+                            "masterCode" : 822248199,
+                            "masterName" : "NR_SEQUENCIA",
+                            "originParam" : "OBJECT",
+                            "parameterName" : "P_NR_SEQ_PROJETO",
+                            "parameterSeq" : 1
+                          }, {
+                            "code" : 518355862,
+                            "defaultValue" : "EX",
+                            "originParam" : "DEFAULT",
+                            "parameterName" : "IE_STATUS_P",
+                            "parameterSeq" : 2
+                          } ],
+                          "procedureCode" : 10170643,
+                          "reloadLine" : "S"
+                        } ],
+                        "eventSeq" : 518344454,
+                        "eventType" : "C"
+                      } ],
+                      "expressionCode" : 1058366,
+                      "menuCode" : 838680307,
+                      "metadataFile" : false,
+                      "name" : "Restart",
+                      "objectType" : "COMPONENT",
+                      "order" : 10,
+                      "parentObjectCode" : 838680307,
+                      "rules" : [ {
+                        "conditionDescription" : "status",
+                        "conditions" : [ {
+                          "baseAttribute" : "IE_STATUS",
+                          "condition" : "=",
+                          "conditionSeq" : 518384094,
+                          "option" : "ATTRIBUTE WITH VALUE",
+                          "referenceObjectCode" : 822248199,
+                          "scriptReference" : 822248199,
+                          "value" : "PF"
+                        } ],
+                        "nrSeqRule" : 518377236,
+                        "result" : "ENABLED"
+                      } ],
+                      "text" : "Restart",
+                      "topList" : false,
+                      "type" : "STANDARD",
+                      "visible" : true
                     } ],
                     "objectType" : "COMPONENT",
                     "parentObjectCode" : 822248199,
@@ -132,7 +486,34 @@
                   "cmdkMetadataCustomization" : false,
                   "code" : 822248199,
                   "componentType" : "WDBPANEL",
-                  "crudRules" : [ ],
+                  "crudRules" : [ {
+                    "canDelete" : false,
+                    "canDuplicate" : false,
+                    "canInsert" : false,
+                    "canUpdate" : true,
+                    "code" : 524762017,
+                    "rules" : [ {
+                      "conditionDescription" : "Valida Status",
+                      "conditions" : [ {
+                        "baseAttribute" : "IE_STATUS",
+                        "condition" : "<>",
+                        "conditionSeq" : 524774083,
+                        "option" : "ATTRIBUTE WITH VALUE",
+                        "referenceObjectCode" : 822248199,
+                        "scriptReference" : 822248199,
+                        "value" : "EX"
+                      }, {
+                        "baseAttribute" : "IE_STATUS",
+                        "condition" : "<>",
+                        "conditionSeq" : 524963523,
+                        "option" : "ATTRIBUTE WITH VALUE",
+                        "referenceObjectCode" : 822248199,
+                        "scriptReference" : 822248199,
+                        "value" : "PF"
+                      } ],
+                      "ruleSeq" : 524767815
+                    } ]
+                  } ],
                   "customProperties" : {
                     "allowBatchSignature" : "N",
                     "showDynamicReport" : "N",
@@ -155,7 +536,7 @@
                     "checkReportRelease" : true,
                     "confirmReleaseRecord" : false,
                     "destroyDetail" : false,
-                    "editableGrid" : false,
+                    "editableGrid" : true,
                     "emptyActivation" : false,
                     "gridWhenSave" : true,
                     "lazyLoadDetail" : false,
@@ -211,7 +592,7 @@
                 "children" : [ {
                   "children" : [ {
                     "children" : [ {
-                      "checkParentsRelease" : false,
+                      "checkParentsRelease" : true,
                       "children" : [ ],
                       "cmdkMetadataCustomization" : false,
                       "code" : 840189196,
@@ -226,11 +607,11 @@
                           "conditionDescription" : "Valida Status",
                           "conditions" : [ {
                             "baseAttribute" : "IE_STATUS",
-                            "condition" : "=",
+                            "condition" : "<>",
                             "conditionSeq" : 840951065,
                             "option" : "ATTRIBUTE WITH VALUE",
-                            "referenceObjectCode" : 840189196,
-                            "scriptReference" : 840189196,
+                            "referenceObjectCode" : 822248199,
+                            "scriptReference" : 822248199,
                             "value" : "AP"
                           } ],
                           "ruleSeq" : 840939711
@@ -282,7 +663,7 @@
                         "reportConfigVisible" : false,
                         "responsive" : false,
                         "saveGridColumnOrder" : false,
-                        "selectFirstRow" : false,
+                        "selectFirstRow" : true,
                         "unificarCountRegistros" : true,
                         "useNewGrid" : true,
                         "usePagination" : true
@@ -375,7 +756,7 @@
                         "reportConfigVisible" : false,
                         "responsive" : false,
                         "saveGridColumnOrder" : false,
-                        "selectFirstRow" : false,
+                        "selectFirstRow" : true,
                         "unificarCountRegistros" : true,
                         "useNewGrid" : true,
                         "usePagination" : true

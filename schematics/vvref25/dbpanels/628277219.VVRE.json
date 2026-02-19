@@ -344,12 +344,13 @@
         "ordem" : 99,
         "primaryKey" : false,
         "qtLargura" : 250,
-        "readOnly" : false,
+        "readOnly" : true,
         "sensitive" : false,
         "tabStop" : false,
         "tipoAtributo" : "VARCHAR2",
         "tooltip" : "Status",
-        "tooltipExpressionCode" : 326292
+        "tooltipExpressionCode" : 326292,
+        "vlDefault" : "AP"
       }, {
         "IeTooltip" : false,
         "alinharDireita" : false,
