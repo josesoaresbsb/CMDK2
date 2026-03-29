@@ -1,0 +1,842 @@
+{
+  "identifier" : "VVRE",
+  "migrations" : [ {
+    "op" : "add",
+    "path" : "/",
+    "value" : {
+      "avoidMemoryLeaks" : true,
+      "dialogs" : [ ],
+      "disableDeveloperBar" : false,
+      "experimentalFeatures" : { },
+      "externalAccessItens" : {
+        "ALL_FEATURES" : [ ],
+        "SPOTLIGHT_FEATURES" : [ ]
+      },
+      "featureCode" : 99700,
+      "globalPopups" : [ ],
+      "metadataToFile" : true,
+      "noDataExpressionCode" : 397569,
+      "children" : [ {
+        "allowCmdkCustomization" : true,
+        "restrictPrimaryLevel" : "N",
+        "restrictSecondaryLevel" : "N",
+        "restrictTertiaryLevel" : "N",
+        "children" : [ {
+          "children" : [ {
+            "children" : [ {
+              "children" : [ {
+                "children" : [ {
+                  "checkParentsRelease" : false,
+                  "children" : [ {
+                    "children" : [ ],
+                    "cmdkMetadataCustomization" : true,
+                    "code" : 822350098,
+                    "componentType" : "WFILTRO",
+                    "customProperties" : {
+                      "enableMultiFilters" : "N"
+                    },
+                    "description" : "Filter - Projetos",
+                    "dictionaryCode" : 819392589,
+                    "experimentalFeatures" : {
+                      "experimentalForm" : false
+                    },
+                    "metadataFile" : true,
+                    "objectType" : "COMPONENT",
+                    "params" : [ ],
+                    "parentObjectCode" : 822248199,
+                    "properties" : {
+                      "closeAfterSearch" : true,
+                      "lazyLoadDetail" : false,
+                      "modal" : false,
+                      "openOnShow" : false,
+                      "orientation" : "TOP",
+                      "responsive" : false
+                    }
+                  }, {
+                    "code" : 838680307,
+                    "componentType" : "WPOPUP",
+                    "description" : "Popup menu",
+                    "displayOrder" : 1,
+                    "menuItems" : [ {
+                      "aiContextMenu" : false,
+                      "alignment" : "E",
+                      "children" : [ ],
+                      "code" : 838689743,
+                      "componentType" : "MENUITEM",
+                      "enabled" : true,
+                      "events" : [ {
+                        "eventActions" : [ {
+                          "actionOrder" : 1,
+                          "actionSeq" : 838749968,
+                          "compReactivateCode" : 822248199,
+                          "eventAction" : "PROC",
+                          "multipleBodyItemsSupported" : false,
+                          "params" : [ {
+                            "code" : 514738343,
+                            "masterCode" : 822248199,
+                            "masterName" : "NR_SEQUENCIA",
+                            "originParam" : "OBJECT",
+                            "parameterName" : "P_NR_SEQ_PROJETO",
+                            "parameterSeq" : 1
+                          }, {
+                            "code" : 514738344,
+                            "defaultValue" : "EX",
+                            "originParam" : "DEFAULT",
+                            "parameterName" : "IE_STATUS_P",
+                            "parameterSeq" : 2
+                          } ],
+                          "procedureCode" : 10170643,
+                          "reloadLine" : "S"
+                        } ],
+                        "eventSeq" : 838749967,
+                        "eventType" : "C"
+                      } ],
+                      "expressionCode" : 317436,
+                      "menuCode" : 838680307,
+                      "metadataFile" : false,
+                      "name" : "Approve proposal ",
+                      "objectType" : "COMPONENT",
+                      "order" : 1,
+                      "parentObjectCode" : 838680307,
+                      "rules" : [ {
+                        "conditionDescription" : "Status",
+                        "conditions" : [ {
+                          "baseAttribute" : "IE_STATUS",
+                          "condition" : "=",
+                          "conditionSeq" : 838802044,
+                          "option" : "ATTRIBUTE WITH VALUE",
+                          "referenceObjectCode" : 822248199,
+                          "scriptReference" : 822248199,
+                          "value" : "AP"
+                        } ],
+                        "nrSeqRule" : 838784461,
+                        "result" : "ENABLED"
+                      } ],
+                      "shortCutDto" : {
+                        "alt" : false,
+                        "ctrl" : true,
+                        "ieAtalho" : "A",
+                        "itemCode" : 838689743,
+                        "keyCode" : 65,
+                        "shift" : true
+                      },
+                      "text" : "Approve proposal ",
+                      "topList" : false,
+                      "type" : "STANDARD",
+                      "visible" : true
+                    }, {
+                      "aiContextMenu" : false,
+                      "alignment" : "E",
+                      "children" : [ ],
+                      "code" : 515297250,
+                      "componentType" : "MENUITEM",
+                      "enabled" : true,
+                      "events" : [ {
+                        "eventActions" : [ {
+                          "actionOrder" : 2,
+                          "actionSeq" : 515399540,
+                          "compReactivateCode" : 822248199,
+                          "eventAction" : "PROC",
+                          "multipleBodyItemsSupported" : false,
+                          "params" : [ {
+                            "code" : 515409089,
+                            "masterCode" : 822248199,
+                            "masterName" : "NR_SEQUENCIA",
+                            "originParam" : "OBJECT",
+                            "parameterName" : "P_NR_SEQ_PROJETO",
+                            "parameterSeq" : 1
+                          }, {
+                            "code" : 515409090,
+                            "defaultValue" : "PP",
+                            "originParam" : "DEFAULT",
+                            "parameterName" : "IE_STATUS_P",
+                            "parameterSeq" : 2
+                          } ],
+                          "procedureCode" : 10170643,
+                          "reloadLine" : "S"
+                        } ],
+                        "eventSeq" : 515399539,
+                        "eventType" : "C"
+                      } ],
+                      "expressionCode" : 322411,
+                      "menuCode" : 838680307,
+                      "metadataFile" : false,
+                      "name" : "Pause",
+                      "objectType" : "COMPONENT",
+                      "order" : 2,
+                      "parentObjectCode" : 838680307,
+                      "rules" : [ {
+                        "conditionDescription" : "Status",
+                        "conditions" : [ {
+                          "baseAttribute" : "IE_STATUS",
+                          "condition" : "=",
+                          "conditionSeq" : 515455647,
+                          "option" : "ATTRIBUTE WITH VALUE",
+                          "referenceObjectCode" : 822248199,
+                          "scriptReference" : 822248199,
+                          "value" : "EX"
+                        } ],
+                        "nrSeqRule" : 515436457,
+                        "result" : "ENABLED"
+                      } ],
+                      "text" : "Pause",
+                      "topList" : false,
+                      "type" : "STANDARD",
+                      "visible" : true
+                    }, {
+                      "aiContextMenu" : false,
+                      "alignment" : "E",
+                      "children" : [ ],
+                      "code" : 516442610,
+                      "componentType" : "MENUITEM",
+                      "enabled" : true,
+                      "events" : [ {
+                        "eventActions" : [ {
+                          "actionOrder" : 4,
+                          "actionSeq" : 516500552,
+                          "compReactivateCode" : 822248199,
+                          "eventAction" : "PROC",
+                          "multipleBodyItemsSupported" : false,
+                          "params" : [ {
+                            "code" : 516521226,
+                            "masterCode" : 822248199,
+                            "masterName" : "NR_SEQUENCIA",
+                            "originParam" : "OBJECT",
+                            "parameterName" : "P_NR_SEQ_PROJETO",
+                            "parameterSeq" : 1
+                          }, {
+                            "code" : 516521227,
+                            "defaultValue" : "NA",
+                            "originParam" : "DEFAULT",
+                            "parameterName" : "IE_STATUS_P",
+                            "parameterSeq" : 2
+                          } ],
+                          "procedureCode" : 10170643,
+                          "reloadLine" : "S"
+                        } ],
+                        "eventSeq" : 516500551,
+                        "eventType" : "C"
+                      } ],
+                      "expressionCode" : 321828,
+                      "menuCode" : 838680307,
+                      "metadataFile" : false,
+                      "name" : "Reject",
+                      "objectType" : "COMPONENT",
+                      "order" : 3,
+                      "parentObjectCode" : 838680307,
+                      "rules" : [ {
+                        "conditionDescription" : "Status",
+                        "conditions" : [ {
+                          "baseAttribute" : "IE_STATUS",
+                          "condition" : "=",
+                          "conditionSeq" : 516576151,
+                          "option" : "ATTRIBUTE WITH VALUE",
+                          "referenceObjectCode" : 822248199,
+                          "scriptReference" : 822248199,
+                          "value" : "AP"
+                        } ],
+                        "nrSeqRule" : 516569018,
+                        "result" : "ENABLED"
+                      } ],
+                      "text" : "Reject",
+                      "topList" : false,
+                      "type" : "STANDARD",
+                      "visible" : true
+                    }, {
+                      "aiContextMenu" : false,
+                      "alignment" : "E",
+                      "children" : [ ],
+                      "code" : 516662885,
+                      "componentType" : "MENUITEM",
+                      "enabled" : true,
+                      "events" : [ {
+                        "eventActions" : [ {
+                          "actionOrder" : 6,
+                          "actionSeq" : 516721196,
+                          "compReactivateCode" : 822248199,
+                          "eventAction" : "PROC",
+                          "multipleBodyItemsSupported" : false,
+                          "params" : [ {
+                            "code" : 516732933,
+                            "masterCode" : 822248199,
+                            "masterName" : "NR_SEQUENCIA",
+                            "originParam" : "OBJECT",
+                            "parameterName" : "P_NR_SEQ_PROJETO",
+                            "parameterSeq" : 1
+                          }, {
+                            "code" : 516732934,
+                            "defaultValue" : "PF",
+                            "originParam" : "DEFAULT",
+                            "parameterName" : "IE_STATUS_P",
+                            "parameterSeq" : 2
+                          } ],
+                          "procedureCode" : 10170643,
+                          "reloadLine" : "S"
+                        } ],
+                        "eventSeq" : 516721195,
+                        "eventType" : "C"
+                      } ],
+                      "expressionCode" : 320113,
+                      "menuCode" : 838680307,
+                      "metadataFile" : false,
+                      "name" : "Finish",
+                      "objectType" : "COMPONENT",
+                      "order" : 5,
+                      "parentObjectCode" : 838680307,
+                      "rules" : [ {
+                        "conditionDescription" : "Status",
+                        "conditions" : [ {
+                          "baseAttribute" : "IE_STATUS",
+                          "condition" : "=",
+                          "conditionSeq" : 516841985,
+                          "option" : "ATTRIBUTE WITH VALUE",
+                          "referenceObjectCode" : 822248199,
+                          "scriptReference" : 822248199,
+                          "value" : "EX"
+                        } ],
+                        "nrSeqRule" : 516837774,
+                        "result" : "ENABLED"
+                      } ],
+                      "text" : "Finish",
+                      "topList" : false,
+                      "type" : "STANDARD",
+                      "visible" : true
+                    }, {
+                      "aiContextMenu" : false,
+                      "alignment" : "E",
+                      "children" : [ ],
+                      "code" : 516922079,
+                      "componentType" : "MENUITEM",
+                      "enabled" : true,
+                      "events" : [ {
+                        "eventActions" : [ {
+                          "actionOrder" : 8,
+                          "actionSeq" : 516974663,
+                          "compReactivateCode" : 822248199,
+                          "eventAction" : "PROC",
+                          "multipleBodyItemsSupported" : false,
+                          "params" : [ {
+                            "code" : 516989137,
+                            "masterCode" : 822248199,
+                            "masterName" : "NR_SEQUENCIA",
+                            "originParam" : "OBJECT",
+                            "parameterName" : "P_NR_SEQ_PROJETO",
+                            "parameterSeq" : 1
+                          }, {
+                            "code" : 516989138,
+                            "defaultValue" : "EX",
+                            "originParam" : "DEFAULT",
+                            "parameterName" : "IE_STATUS_P",
+                            "parameterSeq" : 2
+                          } ],
+                          "procedureCode" : 10170643,
+                          "reloadLine" : "S"
+                        } ],
+                        "eventSeq" : 516974662,
+                        "eventType" : "C"
+                      } ],
+                      "expressionCode" : 1058366,
+                      "menuCode" : 838680307,
+                      "metadataFile" : false,
+                      "name" : "Restart",
+                      "objectType" : "COMPONENT",
+                      "order" : 8,
+                      "parentObjectCode" : 838680307,
+                      "rules" : [ {
+                        "conditionDescription" : "Status",
+                        "conditions" : [ {
+                          "baseAttribute" : "IE_STATUS",
+                          "condition" : "=",
+                          "conditionSeq" : 517016953,
+                          "option" : "ATTRIBUTE WITH VALUE",
+                          "referenceObjectCode" : 822248199,
+                          "scriptReference" : 822248199,
+                          "value" : "PP"
+                        } ],
+                        "nrSeqRule" : 517011817,
+                        "result" : "ENABLED"
+                      } ],
+                      "text" : "Restart",
+                      "topList" : false,
+                      "type" : "STANDARD",
+                      "visible" : true
+                    }, {
+                      "aiContextMenu" : false,
+                      "alignment" : "E",
+                      "children" : [ ],
+                      "code" : 517310231,
+                      "componentType" : "MENUITEM",
+                      "enabled" : true,
+                      "events" : [ {
+                        "eventActions" : [ {
+                          "actionOrder" : 9,
+                          "actionSeq" : 517344379,
+                          "compReactivateCode" : 822248199,
+                          "eventAction" : "PROC",
+                          "multipleBodyItemsSupported" : false,
+                          "params" : [ {
+                            "code" : 517357228,
+                            "masterCode" : 822248199,
+                            "masterName" : "NR_SEQUENCIA",
+                            "originParam" : "OBJECT",
+                            "parameterName" : "P_NR_SEQ_PROJETO",
+                            "parameterSeq" : 1
+                          }, {
+                            "code" : 517357229,
+                            "defaultValue" : "AP",
+                            "originParam" : "DEFAULT",
+                            "parameterName" : "IE_STATUS_P",
+                            "parameterSeq" : 2
+                          } ],
+                          "procedureCode" : 10170643,
+                          "reloadLine" : "S"
+                        } ],
+                        "eventSeq" : 517344378,
+                        "eventType" : "C"
+                      } ],
+                      "expressionCode" : 317804,
+                      "menuCode" : 838680307,
+                      "metadataFile" : false,
+                      "name" : "Undo approval ",
+                      "objectType" : "COMPONENT",
+                      "order" : 9,
+                      "parentObjectCode" : 838680307,
+                      "rules" : [ {
+                        "conditionDescription" : "Status",
+                        "conditions" : [ {
+                          "baseAttribute" : "IE_STATUS",
+                          "condition" : "=",
+                          "conditionSeq" : 517382548,
+                          "option" : "ATTRIBUTE WITH VALUE",
+                          "referenceObjectCode" : 822248199,
+                          "scriptReference" : 822248199,
+                          "value" : "EX"
+                        } ],
+                        "nrSeqRule" : 517377075,
+                        "result" : "ENABLED"
+                      } ],
+                      "text" : "Undo approval ",
+                      "topList" : false,
+                      "type" : "STANDARD",
+                      "visible" : true
+                    }, {
+                      "aiContextMenu" : false,
+                      "alignment" : "E",
+                      "children" : [ ],
+                      "code" : 518326413,
+                      "componentType" : "MENUITEM",
+                      "enabled" : true,
+                      "events" : [ {
+                        "eventActions" : [ {
+                          "actionOrder" : 10,
+                          "actionSeq" : 518344455,
+                          "compReactivateCode" : 822248199,
+                          "eventAction" : "PROC",
+                          "multipleBodyItemsSupported" : false,
+                          "params" : [ {
+                            "code" : 518355861,
+                            "masterCode" : 822248199,
+                            "masterName" : "NR_SEQUENCIA",
+                            "originParam" : "OBJECT",
+                            "parameterName" : "P_NR_SEQ_PROJETO",
+                            "parameterSeq" : 1
+                          }, {
+                            "code" : 518355862,
+                            "defaultValue" : "EX",
+                            "originParam" : "DEFAULT",
+                            "parameterName" : "IE_STATUS_P",
+                            "parameterSeq" : 2
+                          } ],
+                          "procedureCode" : 10170643,
+                          "reloadLine" : "S"
+                        } ],
+                        "eventSeq" : 518344454,
+                        "eventType" : "C"
+                      } ],
+                      "expressionCode" : 1058366,
+                      "menuCode" : 838680307,
+                      "metadataFile" : false,
+                      "name" : "Restart",
+                      "objectType" : "COMPONENT",
+                      "order" : 10,
+                      "parentObjectCode" : 838680307,
+                      "rules" : [ {
+                        "conditionDescription" : "status",
+                        "conditions" : [ {
+                          "baseAttribute" : "IE_STATUS",
+                          "condition" : "=",
+                          "conditionSeq" : 518384094,
+                          "option" : "ATTRIBUTE WITH VALUE",
+                          "referenceObjectCode" : 822248199,
+                          "scriptReference" : 822248199,
+                          "value" : "PF"
+                        } ],
+                        "nrSeqRule" : 518377236,
+                        "result" : "ENABLED"
+                      } ],
+                      "text" : "Restart",
+                      "topList" : false,
+                      "type" : "STANDARD",
+                      "visible" : true
+                    } ],
+                    "objectType" : "COMPONENT",
+                    "parentObjectCode" : 822248199,
+                    "popUpHandle" : "N"
+                  } ],
+                  "cmdkMetadataCustomization" : false,
+                  "code" : 822248199,
+                  "componentType" : "WDBPANEL",
+                  "crudRules" : [ {
+                    "canDelete" : false,
+                    "canDuplicate" : false,
+                    "canInsert" : false,
+                    "canUpdate" : true,
+                    "code" : 524762017,
+                    "rules" : [ {
+                      "conditionDescription" : "Valida Status",
+                      "conditions" : [ {
+                        "baseAttribute" : "IE_STATUS",
+                        "condition" : "<>",
+                        "conditionSeq" : 524774083,
+                        "option" : "ATTRIBUTE WITH VALUE",
+                        "referenceObjectCode" : 822248199,
+                        "scriptReference" : 822248199,
+                        "value" : "EX"
+                      }, {
+                        "baseAttribute" : "IE_STATUS",
+                        "condition" : "<>",
+                        "conditionSeq" : 524963523,
+                        "option" : "ATTRIBUTE WITH VALUE",
+                        "referenceObjectCode" : 822248199,
+                        "scriptReference" : 822248199,
+                        "value" : "PF"
+                      } ],
+                      "ruleSeq" : 524767815
+                    } ]
+                  } ],
+                  "customProperties" : {
+                    "allowBatchSignature" : "N",
+                    "showDynamicReport" : "N",
+                    "withoutCache" : "N"
+                  },
+                  "description" : "DbPanel - Projeto",
+                  "displayOrder" : 1,
+                  "isMaster" : true,
+                  "legends" : [ ],
+                  "masterObjectCode" : 0,
+                  "metadataFile" : true,
+                  "objectType" : "COMPONENT",
+                  "params" : [ ],
+                  "parentObjectCode" : 822228754,
+                  "properties" : {
+                    "action" : "",
+                    "activateOnDetail" : false,
+                    "autoCreateChild" : false,
+                    "cacheDetailViews" : false,
+                    "checkReportRelease" : true,
+                    "confirmReleaseRecord" : false,
+                    "destroyDetail" : false,
+                    "editableGrid" : true,
+                    "emptyActivation" : false,
+                    "gridWhenSave" : true,
+                    "lazyLoadDetail" : false,
+                    "multiSelection" : false,
+                    "onlyDetail" : false,
+                    "pageSize" : 0,
+                    "paginationType" : "P",
+                    "qtMaxRecord" : 0,
+                    "readOnlyType" : "N",
+                    "reportConfigVisible" : false,
+                    "responsive" : false,
+                    "saveGridColumnOrder" : false,
+                    "selectFirstRow" : true,
+                    "unificarCountRegistros" : true,
+                    "useNewGrid" : true,
+                    "usePagination" : true
+                  },
+                  "reports" : [ ],
+                  "signatureConfigured" : false,
+                  "viewCode" : 628277219
+                } ],
+                "code" : 822228754,
+                "description" : "Region 0",
+                "displayOrder" : 1,
+                "objectType" : "REGION",
+                "parentObjectCode" : 822228753
+              } ],
+              "code" : 822228753,
+              "description" : "Master region",
+              "masterRegionType" : "LAYOUT_A",
+              "objectType" : "MASTER_REGION",
+              "parentObjectCode" : 822222528
+            } ],
+            "code" : 822222528,
+            "description" : "Panel",
+            "displayOrder" : 1,
+            "expressionCode" : 314879,
+            "expressionDescription" : "Panel",
+            "objectType" : "PANEL",
+            "panelWidth" : 6,
+            "parentObjectCode" : 822222527
+          }, {
+            "children" : [ {
+              "allowCmdkCustomization" : true,
+              "restrictPrimaryLevel" : "N",
+              "restrictSecondaryLevel" : "N",
+              "restrictTertiaryLevel" : "N",
+              "children" : [ {
+                "allowCmdkCustomization" : true,
+                "restrictPrimaryLevel" : "N",
+                "restrictSecondaryLevel" : "N",
+                "restrictTertiaryLevel" : "N",
+                "children" : [ {
+                  "children" : [ {
+                    "children" : [ {
+                      "checkParentsRelease" : true,
+                      "children" : [ ],
+                      "cmdkMetadataCustomization" : false,
+                      "code" : 840189196,
+                      "componentType" : "WDBPANEL",
+                      "crudRules" : [ {
+                        "canDelete" : false,
+                        "canDuplicate" : false,
+                        "canInsert" : false,
+                        "canUpdate" : false,
+                        "code" : 840933329,
+                        "rules" : [ {
+                          "conditionDescription" : "Valida Status",
+                          "conditions" : [ {
+                            "baseAttribute" : "IE_STATUS",
+                            "condition" : "<>",
+                            "conditionSeq" : 840951065,
+                            "option" : "ATTRIBUTE WITH VALUE",
+                            "referenceObjectCode" : 822248199,
+                            "scriptReference" : 822248199,
+                            "value" : "AP"
+                          } ],
+                          "ruleSeq" : 840939711
+                        } ]
+                      } ],
+                      "customProperties" : {
+                        "allowBatchSignature" : "N",
+                        "showDynamicReport" : "N",
+                        "withoutCache" : "N"
+                      },
+                      "description" : "DbPanel - Elemento Proj",
+                      "displayOrder" : 1,
+                      "isMaster" : false,
+                      "legends" : [ ],
+                      "masterObjectCode" : 822248199,
+                      "metadataFile" : true,
+                      "objectType" : "COMPONENT",
+                      "params" : [ {
+                        "code" : 840571843,
+                        "criteria" : 840526390,
+                        "function" : 0,
+                        "masterCode" : 822248199,
+                        "masterName" : "NR_SEQUENCIA",
+                        "originParam" : "OBJECT",
+                        "parameterCode" : 0,
+                        "parameterName" : "NR_SEQ_PROJETO",
+                        "parameterSeq" : 0,
+                        "parentObjectCode" : 840189196
+                      } ],
+                      "parentObjectCode" : 835587230,
+                      "properties" : {
+                        "action" : "",
+                        "activateOnDetail" : false,
+                        "autoCreateChild" : false,
+                        "cacheDetailViews" : false,
+                        "checkReportRelease" : true,
+                        "confirmReleaseRecord" : false,
+                        "destroyDetail" : false,
+                        "editableGrid" : false,
+                        "emptyActivation" : false,
+                        "gridWhenSave" : true,
+                        "lazyLoadDetail" : false,
+                        "multiSelection" : false,
+                        "onlyDetail" : false,
+                        "pageSize" : 0,
+                        "paginationType" : "P",
+                        "qtMaxRecord" : 0,
+                        "readOnlyType" : "N",
+                        "reportConfigVisible" : false,
+                        "responsive" : false,
+                        "saveGridColumnOrder" : false,
+                        "selectFirstRow" : true,
+                        "unificarCountRegistros" : true,
+                        "useNewGrid" : true,
+                        "usePagination" : true
+                      },
+                      "reports" : [ ],
+                      "signatureConfigured" : false,
+                      "viewActivator" : 840526390,
+                      "viewCode" : 840198972
+                    } ],
+                    "code" : 835587230,
+                    "description" : "Region 0",
+                    "displayOrder" : 1,
+                    "objectType" : "REGION",
+                    "parentObjectCode" : 835587229
+                  } ],
+                  "code" : 835587229,
+                  "description" : "Master region",
+                  "masterRegionType" : "LAYOUT_A",
+                  "objectType" : "MASTER_REGION",
+                  "parentObjectCode" : 822304825
+                } ],
+                "code" : 822304825,
+                "configurable" : true,
+                "hasObjSchemRules" : false,
+                "description" : "Elemento PEP",
+                "displayOrder" : 2,
+                "expressionCode" : 1146058,
+                "expressionDescription" : "Elemento PEP",
+                "objectType" : "TAB",
+                "parentObjectCode" : 822293712,
+                "topList" : false,
+                "visible" : "S"
+              }, {
+                "allowCmdkCustomization" : true,
+                "restrictPrimaryLevel" : "N",
+                "restrictSecondaryLevel" : "N",
+                "restrictTertiaryLevel" : "N",
+                "children" : [ {
+                  "children" : [ {
+                    "children" : [ {
+                      "checkParentsRelease" : false,
+                      "children" : [ ],
+                      "cmdkMetadataCustomization" : false,
+                      "code" : 835602512,
+                      "componentType" : "WDBPANEL",
+                      "crudRules" : [ ],
+                      "customProperties" : {
+                        "allowBatchSignature" : "N",
+                        "showDynamicReport" : "N",
+                        "withoutCache" : "N"
+                      },
+                      "description" : "DbPanel - Historico Projeto",
+                      "displayOrder" : 1,
+                      "isMaster" : false,
+                      "legends" : [ ],
+                      "masterObjectCode" : 822248199,
+                      "metadataFile" : true,
+                      "objectType" : "COMPONENT",
+                      "params" : [ {
+                        "code" : 836124077,
+                        "criteria" : 836098681,
+                        "function" : 0,
+                        "masterCode" : 822248199,
+                        "masterName" : "NR_SEQUENCIA",
+                        "originParam" : "OBJECT",
+                        "parameterCode" : 0,
+                        "parameterName" : "NR_SEQ_PROJETO",
+                        "parameterSeq" : 0,
+                        "parentObjectCode" : 835602512
+                      } ],
+                      "parentObjectCode" : 835596328,
+                      "properties" : {
+                        "action" : "",
+                        "activateOnDetail" : false,
+                        "autoCreateChild" : false,
+                        "cacheDetailViews" : false,
+                        "checkReportRelease" : true,
+                        "confirmReleaseRecord" : false,
+                        "destroyDetail" : false,
+                        "editableGrid" : false,
+                        "emptyActivation" : false,
+                        "gridWhenSave" : true,
+                        "lazyLoadDetail" : false,
+                        "multiSelection" : false,
+                        "onlyDetail" : false,
+                        "pageSize" : 0,
+                        "paginationType" : "P",
+                        "qtMaxRecord" : 0,
+                        "readOnlyType" : "N",
+                        "reportConfigVisible" : false,
+                        "responsive" : false,
+                        "saveGridColumnOrder" : false,
+                        "selectFirstRow" : true,
+                        "unificarCountRegistros" : true,
+                        "useNewGrid" : true,
+                        "usePagination" : true
+                      },
+                      "reports" : [ ],
+                      "signatureConfigured" : false,
+                      "viewActivator" : 836098681,
+                      "viewCode" : 821632430
+                    } ],
+                    "code" : 835596328,
+                    "description" : "Region 0",
+                    "displayOrder" : 1,
+                    "objectType" : "REGION",
+                    "parentObjectCode" : 835596327
+                  } ],
+                  "code" : 835596327,
+                  "description" : "Master region",
+                  "masterRegionType" : "LAYOUT_A",
+                  "objectType" : "MASTER_REGION",
+                  "parentObjectCode" : 822293713
+                } ],
+                "code" : 822293713,
+                "configurable" : true,
+                "hasObjSchemRules" : false,
+                "description" : "Histórico Projeto",
+                "displayOrder" : 99,
+                "expressionCode" : 1148855,
+                "expressionDescription" : "Histórico Projeto",
+                "objectType" : "TAB",
+                "parentObjectCode" : 822293712,
+                "topList" : false,
+                "visible" : "S"
+              } ],
+              "code" : 822293712,
+              "configurable" : false,
+              "hasObjSchemRules" : false,
+              "description" : "Tab",
+              "displayOrder" : 0,
+              "navigatorType" : "TAB",
+              "objectType" : "NAVIGATOR",
+              "parentObjectCode" : 822222529,
+              "selectedNavigatorItem" : 822304825,
+              "topList" : false,
+              "visible" : "S"
+            } ],
+            "code" : 822222529,
+            "description" : "Panel",
+            "displayOrder" : 2,
+            "expressionCode" : 314879,
+            "expressionDescription" : "Panel",
+            "objectType" : "PANEL",
+            "panelWidth" : 6,
+            "parentObjectCode" : 822222527
+          } ],
+          "code" : 822222527,
+          "componentType" : "WSCH",
+          "description" : "Schematic - 12",
+          "objectType" : "SCHEMATIC",
+          "parentObjectCode" : 822204890
+        } ],
+        "code" : 822204890,
+        "configurable" : true,
+        "hasObjSchemRules" : false,
+        "description" : "Projeto de compras",
+        "displayOrder" : 1,
+        "expressionCode" : 1145200,
+        "expressionDescription" : "Projeto de compras",
+        "objectType" : "DROP_DOWN_MENU",
+        "parentObjectCode" : 99700,
+        "topList" : false,
+        "visible" : "S"
+      } ],
+      "code" : 99700,
+      "description" : "Dropdown menu",
+      "navigatorType" : "DROP_DOWN_MENU",
+      "objectType" : "NAVIGATOR",
+      "parentObjectCode" : 0,
+      "selectedNavigatorItem" : 822204890,
+      "version" : "1.7.0"
+    }
+  } ],
+  "type" : "PARTNER"
+}
